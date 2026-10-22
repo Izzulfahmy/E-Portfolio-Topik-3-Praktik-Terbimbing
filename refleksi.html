@@ -4,55 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Refleksi Diri - E-Portfolio PPG</title>
+  
+  <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
+    .nav-btn-active {
+      background-color: #991b1b;
+      color: white !important;
+      border-color: #991b1b !important;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
+<body class="bg-gray-50 text-gray-800 pt-28 md:pt-32 min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER / NAVIGASI -->
-  <header class="bg-red-800 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="Logo LPTK" class="h-10 w-auto bg-white rounded-full p-1" onerror="this.src='https://via.placeholder.com/40'">
-        <span class="font-bold text-lg tracking-wide">E-PORTFOLIO PPG</span>
-      </div>
-      <nav class="hidden md:flex space-x-6 text-sm font-medium">
-        <a href="index.html" class="hover:text-amber-300 transition">Beranda</a>
-        <a href="daftar-isi.html" class="hover:text-amber-300 transition">Daftar Isi</a>
-        <a href="profil.html" class="hover:text-amber-300 transition">Profil</a>
-        <a href="pembelajaran.html" class="hover:text-amber-300 transition">Pembelajaran</a>
-        <a href="praktik.html" class="hover:text-amber-300 transition">Praktik & Non-Mengajar</a>
-        <a href="penilaian.html" class="hover:text-amber-300 transition">Penilaian</a>
-        <a href="refleksi.html" class="text-amber-300 font-semibold">Refleksi</a>
-      </nav>
-    </div>
-    <div class="md:hidden flex overflow-x-auto space-x-4 px-4 py-2 bg-red-900 text-xs font-medium">
-      <a href="index.html" class="hover:text-amber-300 whitespace-nowrap">Beranda</a>
-      <a href="daftar-isi.html" class="hover:text-amber-300 whitespace-nowrap">Daftar Isi</a>
-      <a href="profil.html" class="hover:text-amber-300 whitespace-nowrap">Profil</a>
-      <a href="pembelajaran.html" class="hover:text-amber-300 whitespace-nowrap">Pembelajaran</a>
-      <a href="praktik.html" class="hover:text-amber-300 whitespace-nowrap">Praktik</a>
-      <a href="penilaian.html" class="hover:text-amber-300 whitespace-nowrap">Penilaian</a>
-      <a href="refleksi.html" class="text-amber-300 whitespace-nowrap">Refleksi</a>
-    </div>
-  </header>
+  <!-- WADAH HEADER OTOMATIS -->
+  <div id="header-placeholder"></div>
 
   <!-- KONTEN REFLEKSI -->
-  <main class="max-w-4xl mx-auto px-6 py-12 flex-grow space-y-12">
+  <main class="max-w-4xl mx-auto px-6 py-8 flex-grow space-y-12">
     
     <!-- BANNER JUDUL -->
-    <div class="bg-red-800 text-white rounded-2xl p-8 text-center shadow-md">
+    <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 text-center shadow-lg">
       <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">REFLEKSI DIRI</h1>
       <p class="text-red-100 text-sm mt-2">Evaluasi Pembelajaran & Catatan Perbaikan Diri</p>
     </div>
 
     <!-- KARTU REFLEKSI DIRI -->
-    <section class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
+    <section class="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
       <div class="w-full md:w-1/2 space-y-4">
-        <h2 class="text-2xl font-bold text-red-900 border-b-2 border-amber-400 pb-2 inline-block">Refleksi Pengalaman Praktik</h2>
+        <h2 class="text-2xl font-bold text-red-900 border-b-4 border-amber-400 pb-2 inline-block">Refleksi Pengalaman Praktik</h2>
         <p class="text-gray-700 text-sm leading-relaxed">
           Selama melaksanakan praktik pembelajaran mandiri, saya semakin menyadari bahwa menjadi guru bukan hanya tentang menyampaikan materi, tetapi juga memahami dinamika kelas dan karakter tiap peserta didik.
         </p>
@@ -61,12 +46,12 @@
         </p>
       </div>
       <div class="w-full md:w-1/2 flex justify-center">
-        <img src="assets/refleksi-foto.jpg" alt="Foto Refleksi di Kelas" class="rounded-xl shadow-md border-2 border-amber-300 h-64 object-cover" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+Aktivitas+Kelas'">
+        <img src="assets/refleksi-foto.jpg" alt="Foto Refleksi di Kelas" class="rounded-2xl shadow-md border-4 border-amber-300 h-64 object-cover" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+Aktivitas+Kelas'">
       </div>
     </section>
 
     <!-- SECTION TERIMA KASIH & QUOTE -->
-    <section class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-2xl p-10 text-center shadow-xl space-y-4">
+    <section class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-10 text-center shadow-xl space-y-4">
       <h2 class="text-4xl font-extrabold text-amber-300 italic">Terima Kasih</h2>
       <blockquote class="text-lg italic font-light max-w-xl mx-auto text-red-100">
         "Saya ingin setiap ilmu yang saya punya dapat bermanfaat luas bagi banyak orang."
@@ -82,6 +67,23 @@
   <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
     <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
   </footer>
+
+  <!-- SCRIPT MEMANGGIL HEADER & MENANDAI MENU AKTIF -->
+  <script>
+    fetch('components/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const links = document.querySelectorAll('#header-placeholder a');
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('nav-btn-active');
+            link.classList.remove('border-transparent', 'border-gray-300');
+          }
+        });
+      });
+  </script>
 
 </body>
 </html>

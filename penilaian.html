@@ -4,74 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instrumen Penilaian - E-Portfolio PPG</title>
+  
+  <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
+    .nav-btn-active {
+      background-color: #991b1b;
+      color: white !important;
+      border-color: #991b1b !important;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
+<body class="bg-gray-50 text-gray-800 pt-28 md:pt-32 min-h-screen flex flex-col justify-between">
 
-  <!-- HEADER / NAVIGASI -->
-  <header class="bg-red-800 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="Logo LPTK" class="h-10 w-auto bg-white rounded-full p-1" onerror="this.src='https://via.placeholder.com/40'">
-        <span class="font-bold text-lg tracking-wide">E-PORTFOLIO PPG</span>
-      </div>
-      <nav class="hidden md:flex space-x-6 text-sm font-medium">
-        <a href="index.html" class="hover:text-amber-300 transition">Beranda</a>
-        <a href="daftar-isi.html" class="hover:text-amber-300 transition">Daftar Isi</a>
-        <a href="profil.html" class="hover:text-amber-300 transition">Profil</a>
-        <a href="pembelajaran.html" class="hover:text-amber-300 transition">Pembelajaran</a>
-        <a href="praktik.html" class="hover:text-amber-300 transition">Praktik & Non-Mengajar</a>
-        <a href="penilaian.html" class="text-amber-300 font-semibold">Penilaian</a>
-        <a href="refleksi.html" class="hover:text-amber-300 transition">Refleksi</a>
-      </nav>
-    </div>
-    <div class="md:hidden flex overflow-x-auto space-x-4 px-4 py-2 bg-red-900 text-xs font-medium">
-      <a href="index.html" class="hover:text-amber-300 whitespace-nowrap">Beranda</a>
-      <a href="daftar-isi.html" class="hover:text-amber-300 whitespace-nowrap">Daftar Isi</a>
-      <a href="profil.html" class="hover:text-amber-300 whitespace-nowrap">Profil</a>
-      <a href="pembelajaran.html" class="hover:text-amber-300 whitespace-nowrap">Pembelajaran</a>
-      <a href="praktik.html" class="hover:text-amber-300 whitespace-nowrap">Praktik</a>
-      <a href="penilaian.html" class="text-amber-300 whitespace-nowrap">Penilaian</a>
-      <a href="refleksi.html" class="hover:text-amber-300 whitespace-nowrap">Refleksi</a>
-    </div>
-  </header>
+  <!-- WADAH HEADER OTOMATIS -->
+  <div id="header-placeholder"></div>
 
   <!-- KONTEN PENILAIAN -->
-  <main class="max-w-5xl mx-auto px-6 py-12 flex-grow space-y-12">
+  <main class="max-w-5xl mx-auto px-6 py-8 flex-grow space-y-12">
     
     <!-- BANNER JUDUL -->
-    <div class="bg-red-800 text-white rounded-2xl p-8 text-center shadow-md">
+    <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 text-center shadow-lg">
       <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">INSTRUMEN PENILAIAN</h1>
       <p class="text-red-100 text-sm mt-2">Analisis Asesmen Formatif, Rubrik Penilaian, dan Hasil Evaluasi Belajar</p>
     </div>
 
     <!-- ANALISIS PERTEMUAN 1 -->
-    <section class="bg-white rounded-2xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+    <section class="bg-white rounded-3xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
       <div class="flex justify-center">
-        <img src="assets/penilaian-1.jpg" alt="Instrumen Penilaian Pertemuan 1" class="h-64 object-contain rounded-xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+1'">
+        <img src="assets/penilaian-1.jpg" alt="Instrumen Penilaian Pertemuan 1" class="h-64 object-contain rounded-2xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+1'">
       </div>
       <div class="md:col-span-2 space-y-3">
-        <h2 class="text-2xl font-bold text-red-900 border-b-2 border-amber-400 pb-2 inline-block">Analisis Penilaian Pertemuan 1</h2>
+        <span class="bg-red-50 text-red-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Pertemuan 1</span>
+        <h2 class="text-2xl font-bold text-red-900">Analisis Penilaian Pertemuan 1</h2>
         <p class="text-sm text-gray-700 leading-relaxed">
-          Pada Pertemuan 1, instrumen penilaian disesuaikan dengan tujuan pembelajaran melalui asesmen diagnostik awal dan asesmen formatif saat pengerjaan LKPD. Penilaian dilengkapi rubrik analitik untuk mengukur aspek sikap, pengetahuan, serta keterampilan proses. Hasil asesmen kelompok menunjukkan mayoritas peserta didik mampu mencapai kriteria ketuntasan, meski evaluasi individu perlu diperkuat.
+          Pada Pertemuan 1, instrumen penilaian disesuaikan dengan tujuan pembelajaran melalui asesmen diagnostik awal dan asesmen formatif saat pengerjaan LKPD. Penilaian dilengkapi rubrik analitik untuk mengukur aspek sikap, pengetahuan, serta keterampilan proses. Hasil asesmen kelompok menunjukkan mayoritas peserta didik mampu mencapai kriteria ketuntasan.
         </p>
       </div>
     </section>
 
     <!-- ANALISIS PERTEMUAN 2 -->
-    <section class="bg-white rounded-2xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+    <section class="bg-white rounded-3xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
       <div class="md:col-span-2 space-y-3 order-2 md:order-1">
-        <h2 class="text-2xl font-bold text-red-900 border-b-2 border-amber-400 pb-2 inline-block">Analisis Penilaian Pertemuan 2</h2>
+        <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Pertemuan 2</span>
+        <h2 class="text-2xl font-bold text-red-900">Analisis Penilaian Pertemuan 2</h2>
         <p class="text-sm text-gray-700 leading-relaxed">
           Pada Pertemuan 2, instrumen dikembangkan dengan memberikan porsi asesmen mandiri dan kuis singkat secara langsung. Penggunaan rubrik yang lebih terstruktur membantu mendeteksi pemahaman konsep secara individu, mengurangi ketergantungan pada hasil kerja kelompok, serta memberikan feedback cepat bagi siswa.
         </p>
       </div>
       <div class="flex justify-center order-1 md:order-2">
-        <img src="assets/penilaian-2.jpg" alt="Instrumen Penilaian Pertemuan 2" class="h-64 object-contain rounded-xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+2'">
+        <img src="assets/penilaian-2.jpg" alt="Instrumen Penilaian Pertemuan 2" class="h-64 object-contain rounded-2xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+2'">
       </div>
     </section>
 
@@ -81,6 +68,23 @@
   <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
     <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
   </footer>
+
+  <!-- SCRIPT MEMANGGIL HEADER & MENANDAI MENU AKTIF -->
+  <script>
+    fetch('components/header.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const links = document.querySelectorAll('#header-placeholder a');
+        links.forEach(link => {
+          if (link.getAttribute('href') === currentPage) {
+            link.classList.add('nav-btn-active');
+            link.classList.remove('border-transparent', 'border-gray-300');
+          }
+        });
+      });
+  </script>
 
 </body>
 </html>
