@@ -1,77 +1,56 @@
-<!-- NAVIGASI MODERN MELAYANG (COMPACT & SINGLE LINE) -->
 <header class="fixed top-2 left-0 right-0 z-50 px-2 md:px-6">
-  <div class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-gray-200/80 shadow-md rounded-xl px-3 py-1.5 flex items-center justify-between gap-2 overflow-x-auto">
+  <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-sm rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-2">
     
-    <!-- DERETAN LOGO POJOK KIRI (UKURAN RAMPING) -->
-    <div class="flex items-center space-x-1.5 shrink-0">
-      <!-- 1. Tutwuri -->
-      <img src="assets/tutwuri.png" alt="Tut Wuri Handayani" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
-      <!-- 2. Logo LPTK (UNEJ) -->
-      <img src="assets/logo.png" alt="Logo UNEJ" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
-      <!-- 3. Dikti -->
-      <img src="assets/dikti.jpg" alt="Dikti" class="h-6 md:h-7 w-auto object-contain rounded" onerror="this.style.display='none'">
-      <!-- 4. FKIP -->
-      <img src="assets/fkip.jpg" alt="FKIP UNEJ" class="h-6 md:h-7 w-auto object-contain rounded" onerror="this.style.display='none'">
-      <!-- 5. PPG -->
-      <img src="assets/ppg.png" alt="PPG Prajabatan" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
+    <!-- DERETAN 5 LOGO KIRI (UKURAN RINGKAS) -->
+    <div class="flex items-center gap-1.5 shrink-0">
+      <img src="assets/tutwuri.png" alt="Tutwuri" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
+      <img src="assets/logo.png" alt="UNEJ" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
+      <img src="assets/dikti.jpg" alt="Dikti" class="h-6 w-auto object-contain rounded" onerror="this.style.display='none'">
+      <img src="assets/fkip.jpg" alt="FKIP" class="h-6 w-auto object-contain rounded" onerror="this.style.display='none'">
+      <img src="assets/ppg.png" alt="PPG" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
     </div>
 
-    <!-- MENU TOMBOL BERBINGKAI ROUNDED (TETAP 1 BARIS) -->
-    <nav class="flex items-center space-x-1 text-xs font-semibold shrink-0 whitespace-nowrap overflow-x-auto py-0.5">
-      <a href="index.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+    <!-- MENU TAB NAVIGATION (SEAMLESS SINGLE LINE) -->
+    <nav class="flex items-center gap-1 text-xs font-bold shrink-0 whitespace-nowrap overflow-x-auto py-0.5">
+      <button onclick="switchTab('beranda.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Beranda
-      </a>
-      <a href="daftar-isi.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('daftar-isi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Daftar Isi
-      </a>
-      <a href="profil.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('profil.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Profil
-      </a>
-      <a href="pembelajaran.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('pembelajaran.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Pembelajaran
-      </a>
-      <a href="praktik.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('praktik.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Praktik & Non-Mengajar
-      </a>
-      <a href="penilaian.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('penilaian.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Penilaian
-      </a>
-      <a href="refleksi.html" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+      </button>
+      <button onclick="switchTab('refleksi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
         Refleksi
-      </a>
+      </button>
     </nav>
 
-    <!-- TOMBOL KANAN (FULLSCREEN & DOWNLOAD) -->
-    <div class="flex items-center space-x-1 shrink-0">
-      <!-- Tombol Fullscreen -->
-      <button onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-full text-gray-600 hover:text-red-800 hover:bg-gray-100 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+    <!-- TOMBOL ACTION KANAN (FULLSCREEN & DOWNLOAD LOGO ONLY) -->
+    <div class="flex items-center gap-1 shrink-0">
+      <!-- Fullscreen Button -->
+      <button onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:shadow-sm transition-all cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
         </svg>
       </button>
 
-      <!-- Tombol Download Portfolio/PDF -->
-      <a href="assets/eportfolio.pdf" download title="Unduh Berkas" class="p-1.5 rounded-full text-gray-600 hover:text-red-800 hover:bg-gray-100 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      <!-- Unduh PDF Button -->
+      <a href="assets/eportfolio.pdf" download title="Unduh Berkas" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:shadow-sm transition-all cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
         </svg>
       </a>
     </div>
 
   </div>
 </header>
-
-<!-- SCRIPT LOGIKA FULLSCREEN -->
-<script>
-  function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => {
-        alert(`Gagal masuk mode Fullscreen: ${err.message}`);
-      });
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  }
-</script>
