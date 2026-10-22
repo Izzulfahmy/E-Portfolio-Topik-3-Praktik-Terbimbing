@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio PPG Prajabatan</title>
-    <!-- Tab Favicon -->
+    
+    <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
     <link rel="icon" type="image/png" href="assets/logo.png">
-    <!-- Tailwind CSS & Font -->
+
+    <!-- Tailwind CSS CDN & Google Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
-        .nav-btn-active {
-            background-color: #2563eb !important; /* Blue 600 */
-            color: #ffffff !important;
-            border-color: #2563eb !important;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f8fafc; 
         }
     </style>
 </head>
-<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between pt-16 pb-4 px-2 sm:px-6">
+<body class="text-slate-800 antialiased min-h-screen flex flex-col justify-between pt-16 md:pt-20 pb-20 md:pb-4 px-2 sm:px-6">
 
-    <!-- HEADER FLOATING BAR CONTAINER -->
+    <!-- WADAH HEADER OTOMATIS (FLOATING BAR DESKTOP & MOBILE) -->
     <div id="header-placeholder" class="w-full"></div>
 
-    <!-- MAIN CONTAINER (TEMPAT KONTEN DIPANGGIL) -->
-    <main id="portfolio-container" class="w-full max-w-6xl mx-auto my-auto flex-grow flex items-center justify-center">
+    <!-- MAIN CONTAINER (TEMPAT KONTEN DINAMIS DARI PAGES/ DIPANGGIL) -->
+    <main id="portfolio-container" class="w-full max-w-6xl mx-auto my-auto flex-grow flex items-center justify-center min-h-[calc(100vh-5rem)] md:h-[calc(100vh-5rem)] overflow-y-auto md:overflow-hidden">
         <!-- File dari folder pages/ akan masuk ke sini via Fetch -->
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER GLOBAL -->
     <footer class="w-full max-w-6xl mx-auto text-center py-4 text-xs font-semibold text-slate-400 border-t border-slate-200/60 mt-4">
         <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
     </footer>
 
-    <!-- SCRIPT FETCH UNTUK SEAMLESS TAB NAVIGATION -->
+    <!-- SCRIPT SINGLE PAGE APPLICATION & NAVIGASI SEAMLESS -->
     <script>
         const pagesList = [
             'beranda.html',
@@ -46,13 +46,13 @@
             'refleksi.html'
         ];
 
-        // 1. Load Header Component
+        // 1. Load Komponen Header
         async function initHeader() {
             try {
                 const res = await fetch('components/header.html');
                 if (res.ok) {
                     document.getElementById('header-placeholder').innerHTML = await res.text();
-                    // Load awal halaman beranda
+                    // Muat halaman awal (beranda) secara otomatis saat pertama dibuka
                     switchTab('beranda.html');
                 }
             } catch (err) {
@@ -60,7 +60,7 @@
             }
         }
 
-        // 2. Load Content Page di Background Tanpa Reload
+        // 2. Load Konten Halaman di Background Tanpa Reload
         async function switchTab(pageFile) {
             const container = document.getElementById('portfolio-container');
             try {
@@ -68,10 +68,10 @@
                 if (!res.ok) throw new Error('Halaman tidak ditemukan');
                 const html = await res.text();
                 
-                // Masukkan konten secara instan
+                // Masukkan konten secara instan tanpa kedip
                 container.innerHTML = html;
                 
-                // Update tampilan tombol aktif di header
+                // Update tampilan warna tombol aktif di header atas & mobile bawah
                 updateHeaderButtons(pageFile);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } catch (err) {
@@ -83,33 +83,32 @@
             }
         }
 
-        // 3. Update Status Active Tombol Tab
+        // 3. Update Status Warna Tombol Aktif (Bebas Sisa Border)
         function updateHeaderButtons(activeFile) {
-            const links = document.querySelectorAll('#header-placeholder nav a, #header-placeholder nav button');
-            links.forEach(btn => {
-                const href = btn.getAttribute('onclick') || '';
-                if (href.includes(activeFile)) {
-                    btn.classList.add('nav-btn-active');
-                    btn.classList.remove('text-slate-500', 'border-transparent');
+            // Update Tombol Desktop (Header Atas)
+            const desktopButtons = document.querySelectorAll('#header-placeholder nav button.tab-btn');
+            desktopButtons.forEach(btn => {
+                const onclickAttr = btn.getAttribute('onclick') || '';
+                if (onclickAttr.includes(activeFile)) {
+                    btn.className = "tab-btn px-3 py-1.5 rounded-lg bg-blue-600 text-white font-bold shadow-sm transition-all cursor-pointer border-0 outline-none";
                 } else {
-                    btn.classList.remove('nav-btn-active');
-                    btn.classList.add('text-slate-500');
+                    btn.className = "tab-btn px-3 py-1.5 rounded-lg text-slate-500 hover:text-blue-600 hover:bg-slate-100 transition-all cursor-pointer border-0 outline-none";
+                }
+            });
+
+            // Update Tombol Mobile (Bottom Nav Bawah)
+            const mobileButtons = document.querySelectorAll('#header-placeholder nav button.tab-btn-mobile');
+            mobileButtons.forEach(btn => {
+                const onclickAttr = btn.getAttribute('onclick') || '';
+                if (onclickAttr.includes(activeFile)) {
+                    btn.className = "tab-btn-mobile p-2 rounded-xl bg-blue-600 text-white shadow-md transition-all cursor-pointer border-0 outline-none";
+                } else {
+                    btn.className = "tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 transition-all cursor-pointer border-0 outline-none";
                 }
             });
         }
 
-        // 4. Toggle Fullscreen
-        function toggleFullScreen() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen().catch(err => {
-                    alert(`Gagal layar penuh: ${err.message}`);
-                });
-            } else {
-                if (document.exitFullscreen) document.exitFullscreen();
-            }
-        }
-
-        // Jalankan saat halaman dibuka
+        // Jalankan inisialisasi saat struktur DOM selesai dimuat
         window.addEventListener('DOMContentLoaded', initHeader);
     </script>
 </body>

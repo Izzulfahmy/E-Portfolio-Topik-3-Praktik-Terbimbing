@@ -1,37 +1,54 @@
-<div class="w-full max-w-5xl mx-auto py-6">
-  <div class="relative bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="w-full max-w-6xl mx-auto h-full flex flex-col justify-between py-2 md:py-4 px-2 sm:px-4">
+  
+  <!-- HERO CARD CONTAINER (LOCKED SCREEN FOR DESKTOP) -->
+  <div class="relative bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 my-auto">
     
-    <!-- TEKS HERO -->
-    <div class="md:w-1/2 space-y-4 text-center md:text-left">
-      <span class="bg-amber-400 text-red-950 font-bold px-3.5 py-1 rounded-full text-xs uppercase tracking-wider">
-        Portofolio LK 3 PPL
-      </span>
-      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
-        E-PORTFOLIO <br><span class="text-amber-300">PPG PRAJABATAN</span>
+    <!-- ORNAMEN BACKGROUND GLOW -->
+    <div class="absolute -top-12 -left-12 w-48 h-48 bg-amber-400/10 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-red-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+    <!-- TEKS HERO / KANAN (MOBILE: ATAS) -->
+    <div class="w-full md:w-3/5 space-y-3 md:space-y-4 text-center md:text-left z-10">
+      <div class="inline-block">
+        <span class="bg-amber-400 text-red-950 font-extrabold px-3 py-1 rounded-full text-[11px] md:text-xs uppercase tracking-wider shadow-sm">
+          Portofolio LK 3 PPL
+        </span>
+      </div>
+      
+      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+        E-PORTFOLIO <br>
+        <span class="text-amber-300">PPG PRAJABATAN</span>
       </h1>
-      <p class="text-red-100 text-sm md:text-base leading-relaxed">
-        Dokumentasi & Analisis Pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing
+      
+      <p class="text-red-100 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl">
+        Dokumentasi & Analisis Pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing — Universitas Negeri Jember.
       </p>
+      
       <div class="pt-2">
-        <button onclick="switchTab('daftar-isi.html')" class="inline-flex items-center gap-2 bg-amber-400 text-red-950 font-bold px-5 py-2.5 rounded-full shadow-md hover:bg-amber-300 transition duration-300 cursor-pointer text-sm">
-          Jelajahi Portofolio &rarr;
+        <button onclick="switchTab('daftar-isi.html')" class="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-red-950 font-extrabold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer text-xs md:text-sm">
+          <span>Jelajahi Portofolio</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
         </button>
       </div>
     </div>
 
-    <!-- FOTO PROFIL BANNER -->
-    <div class="md:w-1/2 flex justify-center">
-      <div class="relative w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden border-4 border-amber-300 shadow-2xl bg-red-950">
-        <img src="assets/foto-profil.jpg" alt="Foto Profil Guru" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Foto+Profil'">
+    <!-- FOTO PROFIL BANNER / KIRI (MOBILE: BAWAH) -->
+    <div class="w-full md:w-2/5 flex justify-center z-10">
+      <div class="relative w-44 h-56 sm:w-52 sm:h-64 md:w-60 md:h-76 lg:w-64 lg:h-80 rounded-2xl overflow-hidden border-4 border-amber-300/90 shadow-2xl bg-red-950 transform hover:scale-102 transition duration-300">
+        <img src="assets/foto-profil.jpg" alt="Foto Profil Guru" class="w-full h-full object-cover object-top" onerror="this.src='https://via.placeholder.com/300x400?text=Foto+Profil'">
       </div>
     </div>
 
   </div>
 
-  <div class="py-8 text-center space-y-2">
-    <h2 class="text-xl font-bold text-slate-800">Selamat Datang di Portofolio Digital</h2>
-    <p class="text-slate-600 max-w-2xl mx-auto text-sm leading-relaxed">
-      Website ini memuat analisis rancangan pembelajaran, materi, media, video pelaksanaan mengajar, kegiatan non-mengajar, serta instrumen penilaian dan refleksi diri.
+  <!-- SECTION SAMBUTAN RINGKAS -->
+  <div class="py-3 text-center space-y-1">
+    <h2 class="text-sm md:text-base font-bold text-slate-800">Selamat Datang di Portofolio Digital</h2>
+    <p class="text-slate-500 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed">
+      Memuat analisis rancangan pembelajaran, materi, media, video praktik mengajar, kegiatan non-mengajar, serta instrumen penilaian dan refleksi diri.
     </p>
   </div>
+
 </div>
