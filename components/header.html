@@ -1,7 +1,8 @@
+<!-- NAVIGASI MODERN FLOATING BAR (COMPACT & PROFESSIONAL UI/UX) -->
 <header class="fixed top-2 left-0 right-0 z-50 px-2 md:px-6">
   <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-sm rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-2">
     
-    <!-- DERETAN 5 LOGO KIRI (UKURAN RINGKAS) -->
+    <!-- DERETAN LOGO KIRI (UKURAN RAMPING & PRESISI) -->
     <div class="flex items-center gap-1.5 shrink-0">
       <img src="assets/tutwuri.png" alt="Tutwuri" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
       <img src="assets/logo.png" alt="UNEJ" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
@@ -10,47 +11,90 @@
       <img src="assets/ppg.png" alt="PPG" class="h-6 w-auto object-contain" onerror="this.style.display='none'">
     </div>
 
-    <!-- MENU TAB NAVIGATION (SEAMLESS SINGLE LINE) -->
+    <!-- MENU TAB NAVIGATION (SEAMLESS & MODERAT) -->
     <nav class="flex items-center gap-1 text-xs font-bold shrink-0 whitespace-nowrap overflow-x-auto py-0.5">
-      <button onclick="switchTab('beranda.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('beranda.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Beranda
       </button>
-      <button onclick="switchTab('daftar-isi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('daftar-isi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Daftar Isi
       </button>
-      <button onclick="switchTab('profil.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('profil.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Profil
       </button>
-      <button onclick="switchTab('pembelajaran.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('pembelajaran.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Pembelajaran
       </button>
-      <button onclick="switchTab('praktik.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('praktik.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Praktik & Non-Mengajar
       </button>
-      <button onclick="switchTab('penilaian.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('penilaian.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Penilaian
       </button>
-      <button onclick="switchTab('refleksi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 transition-all cursor-pointer">
+      <button onclick="switchTab('refleksi.html')" class="px-3 py-1.5 rounded-lg border border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer">
         Refleksi
       </button>
     </nav>
 
-    <!-- TOMBOL ACTION KANAN (FULLSCREEN & DOWNLOAD LOGO ONLY) -->
+    <!-- TOMBOL ACTION KANAN (FULLSCREEN PERTAMA, DOWNLOAD KEDUA - NONAKTIF) -->
     <div class="flex items-center gap-1 shrink-0">
-      <!-- Fullscreen Button -->
-      <button onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:shadow-sm transition-all cursor-pointer">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
+      
+      <!-- 1. Tombol Fullscreen (Aktif & Berfungsi) -->
+      <button id="btn-fullscreen" onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer flex items-center justify-center">
+        <!-- Ikon Masuk Fullscreen -->
+        <svg id="icon-expand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+        </svg>
+        <!-- Ikon Keluar Fullscreen (Tersembunyi Awal) -->
+        <svg id="icon-collapse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 hidden">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
         </svg>
       </button>
 
-      <!-- Unduh PDF Button -->
-      <a href="assets/eportfolio.pdf" download title="Unduh Berkas" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:shadow-sm transition-all cursor-pointer">
+      <!-- 2. Tombol Download (Nonaktif Sementara) -->
+      <a href="javascript:void(0)" onclick="alert('Fitur unduh berkas belum tersedia.')" title="Unduh Berkas (Belum Aktif)" class="p-1.5 rounded-lg border border-slate-200/60 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center opacity-70">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
         </svg>
       </a>
+
     </div>
 
   </div>
 </header>
+
+<!-- LOGIKA PEMANTAUAN LAYAR PENUH (FULLSCREEN DETECTOR) -->
+<script>
+  function toggleFullScreen() {
+    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+  }
+
+  // Update Ikon Fullscreen Otomatis Saat Status Berubah
+  document.addEventListener('fullscreenchange', updateFullscreenIcon);
+  document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
+
+  function updateFullscreenIcon() {
+    const iconExpand = document.getElementById('icon-expand');
+    const iconCollapse = document.getElementById('icon-collapse');
+    
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (iconExpand) iconExpand.classList.add('hidden');
+      if (iconCollapse) iconCollapse.classList.remove('hidden');
+    } else {
+      if (iconExpand) iconExpand.classList.remove('hidden');
+      if (iconCollapse) iconCollapse.classList.add('hidden');
+    }
+  }
+</script>
