@@ -35,16 +35,20 @@
 
     <!-- TOMBOL ACTION KANAN -->
     <div class="flex items-center gap-1 shrink-0">
+      <!-- 1. Tombol Download (Nonaktif Sementara) -->
       <a href="javascript:void(0)" onclick="alert('Fitur unduh berkas belum tersedia.')" title="Unduh Berkas (Belum Aktif)" class="p-1.5 rounded-lg border border-slate-200/60 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center opacity-70">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
         </svg>
       </a>
 
-      <button id="btn-fullscreen" onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer flex items-center justify-center">
-        <svg id="icon-expand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4">
+      <!-- 2. Tombol Fullscreen -->
+      <button type="button" id="btn-fullscreen" onclick="handleFullscreenToggle()" title="Layar Penuh" class="p-1.5 rounded-lg border border-slate-200/80 bg-white text-slate-500 hover:text-blue-600 hover:bg-slate-50 active:scale-95 transition-all cursor-pointer flex items-center justify-center">
+        <!-- Ikon Masuk Fullscreen -->
+        <svg id="icon-expand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 block">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
         </svg>
+        <!-- Ikon Keluar Fullscreen -->
         <svg id="icon-collapse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-4 h-4 hidden">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M9 9H4.5M9 9 3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5 5.25 5.25" />
         </svg>
@@ -57,83 +61,82 @@
 <!-- ================= MENU BOTTOM BAR KHUSUS MOBILE ================= -->
 <div class="md:hidden fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-sm">
   <nav class="bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl rounded-2xl px-2 py-2 flex items-center justify-around gap-1">
-    
-    <!-- 1. Beranda -->
     <button onclick="switchTab('beranda.html')" title="Beranda" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
       </svg>
     </button>
-
-    <!-- 2. Profil -->
     <button onclick="switchTab('profil.html')" title="Profil Guru" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     </button>
-
-    <!-- 3. Pembelajaran -->
     <button onclick="switchTab('pembelajaran.html')" title="Pembelajaran" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25" />
       </svg>
     </button>
-
-    <!-- 4. Praktik -->
     <button onclick="switchTab('praktik.html')" title="Praktik & Non-Mengajar" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
       </svg>
     </button>
-
-    <!-- 5. Penilaian -->
     <button onclick="switchTab('penilaian.html')" title="Instrumen Penilaian" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     </button>
-
-    <!-- 6. Refleksi -->
     <button onclick="switchTab('refleksi.html')" title="Refleksi Diri" class="tab-btn-mobile p-2 rounded-xl text-slate-500 hover:text-blue-600 hover:bg-slate-100 active:scale-90 transition-all cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     </button>
-
   </nav>
 </div>
 
-<!-- ================= LOGIKA JAVASCRIPT ================= -->
+<!-- ================= SCRIPT FULLSCREEN UNIVERSAL ================= -->
 <script>
-  function toggleFullScreen() {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen();
+  function handleFullscreenToggle() {
+    const doc = document;
+    const docEl = document.documentElement;
+
+    const requestFS = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+    const exitFS = doc.exitFullscreen || doc.webkitExitFullscreen || doc.mozCancelFullScreen || doc.msExitFullscreen;
+
+    const isFS = doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement;
+
+    if (!isFS) {
+      if (requestFS) {
+        requestFS.call(docEl).catch(err => alert("Gagal mengaktifkan Fullscreen: " + err.message));
       }
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
+      if (exitFS) {
+        exitFS.call(doc);
       }
     }
   }
 
-  document.addEventListener('fullscreenchange', updateFullscreenIcon);
-  document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
-
-  function updateFullscreenIcon() {
+  function syncFullscreenIcons() {
     const iconExpand = document.getElementById('icon-expand');
     const iconCollapse = document.getElementById('icon-collapse');
-    
-    if (document.fullscreenElement || document.webkitFullscreenElement) {
-      if (iconExpand) iconExpand.classList.add('hidden');
-      if (iconCollapse) iconCollapse.classList.remove('hidden');
-    } else {
-      if (iconExpand) iconExpand.classList.remove('hidden');
-      if (iconCollapse) iconCollapse.classList.add('hidden');
+    const isFS = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+
+    if (iconExpand && iconCollapse) {
+      if (isFS) {
+        iconExpand.classList.add('hidden');
+        iconExpand.classList.remove('block');
+        iconCollapse.classList.remove('hidden');
+        iconCollapse.classList.add('block');
+      } else {
+        iconExpand.classList.remove('hidden');
+        iconExpand.classList.add('block');
+        iconCollapse.classList.add('hidden');
+        iconCollapse.classList.remove('block');
+      }
     }
   }
+
+  ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(event => {
+    document.addEventListener(event, syncFullscreenIcons);
+  });
 </script>
