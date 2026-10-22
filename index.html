@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda - E-Portfolio PPG</title>
+  <title>E-Portfolio PPG Prajabatan</title>
   
   <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -13,82 +13,277 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
+    /* Style Tombol Navigasi Aktif */
     .nav-btn-active {
-      background-color: #991b1b;
+      background-color: #991b1b !important;
       color: white !important;
       border-color: #991b1b !important;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 pt-28 md:pt-32 min-h-screen flex flex-col justify-between">
+<body class="bg-gray-50 text-gray-800 pt-16 min-h-screen flex flex-col justify-between">
 
-  <!-- WADAH HEADER OTOMATIS -->
-  <div id="header-placeholder"></div>
+  <!-- NAVIGASI MODERN MELAYANG (COMPACT & SINGLE LINE) -->
+  <header class="fixed top-2 left-0 right-0 z-50 px-2 md:px-6">
+    <div class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md border border-gray-200/80 shadow-md rounded-xl px-3 py-1.5 flex items-center justify-between gap-2 overflow-x-auto">
+      
+      <!-- DERETAN LOGO POJOK KIRI -->
+      <div class="flex items-center space-x-1.5 shrink-0">
+        <img src="assets/tutwuri.png" alt="Tut Wuri" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
+        <img src="assets/logo.png" alt="Logo UNEJ" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
+        <img src="assets/dikti.jpg" alt="Dikti" class="h-6 md:h-7 w-auto object-contain rounded" onerror="this.style.display='none'">
+        <img src="assets/fkip.jpg" alt="FKIP UNEJ" class="h-6 md:h-7 w-auto object-contain rounded" onerror="this.style.display='none'">
+        <img src="assets/ppg.png" alt="PPG" class="h-6 md:h-7 w-auto object-contain" onerror="this.style.display='none'">
+      </div>
 
-  <!-- HERO SECTION / BANNER UTAMA -->
+      <!-- MENU TOMBOL TAB (TANPA RELOAD) -->
+      <nav class="flex items-center space-x-1 text-xs font-semibold shrink-0 whitespace-nowrap overflow-x-auto py-0.5">
+        <button onclick="switchTab('beranda')" id="btn-beranda" class="nav-btn nav-btn-active px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Beranda
+        </button>
+        <button onclick="switchTab('daftar-isi')" id="btn-daftar-isi" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Daftar Isi
+        </button>
+        <button onclick="switchTab('profil')" id="btn-profil" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Profil
+        </button>
+        <button onclick="switchTab('pembelajaran')" id="btn-pembelajaran" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Pembelajaran
+        </button>
+        <button onclick="switchTab('praktik')" id="btn-praktik" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Praktik & Non-Mengajar
+        </button>
+        <button onclick="switchTab('penilaian')" id="btn-penilaian" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Penilaian
+        </button>
+        <button onclick="switchTab('refleksi')" id="btn-refleksi" class="nav-btn px-2.5 py-1 rounded-full border border-transparent hover:border-red-800 hover:text-red-800 transition-all duration-200">
+          Refleksi
+        </button>
+      </nav>
+
+      <!-- TOMBOL KANAN (FULLSCREEN & DOWNLOAD) -->
+      <div class="flex items-center space-x-1 shrink-0">
+        <button onclick="toggleFullScreen()" title="Layar Penuh" class="p-1.5 rounded-full text-gray-600 hover:text-red-800 hover:bg-gray-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+          </svg>
+        </button>
+        <a href="assets/eportfolio.pdf" download title="Unduh Berkas" class="p-1.5 rounded-full text-gray-600 hover:text-red-800 hover:bg-gray-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- WADAH KONTEN UTAMA (TAB SYSTEM) -->
   <main class="flex-grow">
-    <section class="max-w-7xl mx-auto px-4 md:px-8 py-6">
-      <div class="relative bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10">
-        
-        <!-- TEKS HERO -->
-        <div class="md:w-1/2 space-y-5 text-center md:text-left z-10">
-          <span class="bg-amber-400 text-red-950 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider shadow-sm">
-            Portofolio LK 3 PPL
-          </span>
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide">
-            E-PORTFOLIO <br><span class="text-amber-300">PPG PRAJABATAN</span>
-          </h1>
-          <p class="text-red-100 text-sm md:text-base leading-relaxed">
-            Dokumentasi & Analisis Pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing
-          </p>
-          <div class="pt-2">
-            <a href="daftar-isi.html" class="inline-flex items-center gap-2 bg-amber-400 text-red-950 font-bold px-6 py-3.5 rounded-full shadow-lg hover:bg-amber-300 hover:scale-105 transition duration-300">
-              Jelajahi Portofolio &rarr;
-            </a>
+    
+    <!-- TAB 1: BERANDA -->
+    <div id="tab-beranda" class="tab-content">
+      <section class="max-w-7xl mx-auto px-4 md:px-8 py-4">
+        <div class="relative bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 md:p-12 shadow-xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10">
+          <div class="md:w-1/2 space-y-5 text-center md:text-left z-10">
+            <span class="bg-amber-400 text-red-950 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider shadow-sm">Portofolio LK 3 PPL</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide">E-PORTFOLIO <br><span class="text-amber-300">PPG PRAJABATAN</span></h1>
+            <p class="text-red-100 text-sm md:text-base leading-relaxed">Dokumentasi & Analisis Pelaksanaan Praktik Pengalaman Lapangan (PPL) Terbimbing</p>
+            <div class="pt-2">
+              <button onclick="switchTab('daftar-isi')" class="inline-flex items-center gap-2 bg-amber-400 text-red-950 font-bold px-6 py-3 rounded-full shadow-lg hover:bg-amber-300 transition duration-300">
+                Jelajahi Portofolio &rarr;
+              </button>
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center z-10">
+            <div class="relative w-60 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border-4 border-amber-300 shadow-2xl bg-red-950">
+              <img src="assets/foto-profil.jpg" alt="Foto Profil Guru" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Foto+Profil'">
+            </div>
           </div>
         </div>
+      </section>
+      <section class="py-6 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-2">
+          <h2 class="text-2xl font-bold text-gray-800">Selamat Datang di Portofolio Digital</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">Website ini memuat analisis rancangan pembelajaran, materi, media, video pelaksanaan mengajar, kegiatan non-mengajar, serta instrumen penilaian dan refleksi diri.</p>
+        </div>
+      </section>
+    </div>
 
-        <!-- FOTO PROFIL BANNER -->
-        <div class="md:w-1/2 flex justify-center z-10">
-          <div class="relative w-60 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border-4 border-amber-300 shadow-2xl bg-red-950">
-            <img src="assets/foto-profil.jpg" alt="Foto Profil Guru" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/300x400?text=Foto+Profil'">
+    <!-- TAB 2: DAFTAR ISI -->
+    <div id="tab-daftar-isi" class="tab-content hidden">
+      <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="text-center mb-8 space-y-2">
+          <h1 class="text-3xl md:text-4xl font-extrabold text-red-900">Daftar Isi Portofolio</h1>
+          <p class="text-gray-600 max-w-xl mx-auto text-sm md:text-base">Pilih kartu menu di bawah ini untuk menjelajahi komponen analisis dan dokumentasi PPL.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <button onclick="switchTab('profil')" class="text-left group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-red-800 hover:shadow-xl transition duration-300 flex justify-between items-center">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-red-800 font-bold bg-red-50 px-3 py-1 rounded-full">Komponen 1</span>
+              <h3 class="text-xl font-bold mt-3 text-gray-800 group-hover:text-red-900">Profil Guru & Lokasi</h3>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-red-50 text-red-800 font-bold flex items-center justify-center group-hover:bg-red-800 group-hover:text-white transition duration-300">&rarr;</span>
+          </button>
+          <button onclick="switchTab('pembelajaran')" class="text-left group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-red-800 hover:shadow-xl transition duration-300 flex justify-between items-center">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-red-800 font-bold bg-red-50 px-3 py-1 rounded-full">Komponen 2</span>
+              <h3 class="text-xl font-bold mt-3 text-gray-800 group-hover:text-red-900">Analisis Pembelajaran</h3>
+              <p class="text-xs text-gray-500 mt-1">RPM, Materi, & Media</p>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-red-50 text-red-800 font-bold flex items-center justify-center group-hover:bg-red-800 group-hover:text-white transition duration-300">&rarr;</span>
+          </button>
+          <button onclick="switchTab('praktik')" class="text-left group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-red-800 hover:shadow-xl transition duration-300 flex justify-between items-center">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-red-800 font-bold bg-red-50 px-3 py-1 rounded-full">Komponen 3</span>
+              <h3 class="text-xl font-bold mt-3 text-gray-800 group-hover:text-red-900">Praktik & Non-Mengajar</h3>
+              <p class="text-xs text-gray-500 mt-1">Video & Kegiatan Ekstra</p>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-red-50 text-red-800 font-bold flex items-center justify-center group-hover:bg-red-800 group-hover:text-white transition duration-300">&rarr;</span>
+          </button>
+          <button onclick="switchTab('penilaian')" class="text-left group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-red-800 hover:shadow-xl transition duration-300 flex justify-between items-center">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-red-800 font-bold bg-red-50 px-3 py-1 rounded-full">Komponen 4</span>
+              <h3 class="text-xl font-bold mt-3 text-gray-800 group-hover:text-red-900">Instrumen Penilaian</h3>
+              <p class="text-xs text-gray-500 mt-1">Rubrik & Analisis Asesmen</p>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-red-50 text-red-800 font-bold flex items-center justify-center group-hover:bg-red-800 group-hover:text-white transition duration-300">&rarr;</span>
+          </button>
+          <button onclick="switchTab('refleksi')" class="text-left group bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:border-red-800 hover:shadow-xl transition duration-300 flex justify-between items-center">
+            <div>
+              <span class="text-xs uppercase tracking-wider text-red-800 font-bold bg-red-50 px-3 py-1 rounded-full">Komponen 5</span>
+              <h3 class="text-xl font-bold mt-3 text-gray-800 group-hover:text-red-900">Refleksi Diri</h3>
+              <p class="text-xs text-gray-500 mt-1">Evaluasi & Kesimpulan</p>
+            </div>
+            <span class="w-10 h-10 rounded-full bg-red-50 text-red-800 font-bold flex items-center justify-center group-hover:bg-red-800 group-hover:text-white transition duration-300">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: PROFIL -->
+    <div id="tab-profil" class="tab-content hidden">
+      <div class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+        <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-6 text-center shadow-lg">
+          <h1 class="text-3xl font-extrabold uppercase">PROFIL GURU</h1>
+        </div>
+        <section class="bg-white rounded-3xl shadow-md p-8 border border-gray-100 flex flex-col md:flex-row items-center gap-8">
+          <div class="w-48 h-64 rounded-2xl overflow-hidden border-4 border-amber-300 shadow-md flex-shrink-0 bg-gray-100">
+            <img src="assets/foto-profil.jpg" alt="Foto Guru" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/200x300?text=Foto+Profil'">
+          </div>
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold text-red-900 border-b-4 border-amber-400 pb-2 inline-block">Tentang Saya</h2>
+            <p class="text-gray-700 leading-relaxed text-sm md:text-base">Halo, saya mahasiswa Pendidikan Profesi Guru (PPG) Prajabatan. Saya memiliki dedikasi tinggi dalam mengembangkan pembelajaran yang inovatif, interaktif, dan berorientasi pada peserta didik.</p>
+          </div>
+        </section>
+        <section class="bg-gradient-to-r from-red-900 to-red-800 text-white rounded-3xl p-8 shadow-md grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-3">
+            <span class="bg-amber-400 text-red-950 text-xs font-bold px-3 py-1 rounded-full uppercase">LPTK</span>
+            <h2 class="text-2xl font-bold text-amber-300">Universitas Negeri Jember</h2>
+            <p class="text-red-100 text-sm leading-relaxed">LPTK tempat saya menempuh Program Pendidikan Profesi Guru.</p>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-lg h-48 bg-gray-200">
+            <img src="assets/lokasi-lptk.jpg" alt="Lokasi LPTK" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x200?text=Foto/Map+LPTK'">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- TAB 4: PEMBELAJARAN -->
+    <div id="tab-pembelajaran" class="tab-content hidden">
+      <div class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+        <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-6 text-center shadow-lg">
+          <h1 class="text-3xl font-extrabold uppercase">ANALISIS PEMBELAJARAN</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-red-800 space-y-3">
+            <h3 class="text-lg font-bold text-red-900">Analisis RPM Pertemuan 1</h3>
+            <p class="text-sm text-gray-700">Tujuan pembelajaran disesuaikan dengan kebutuhan awal siswa melalui active learning.</p>
+          </div>
+          <div class="bg-white p-6 rounded-3xl shadow-md border-l-8 border-amber-500 space-y-3">
+            <h3 class="text-lg font-bold text-red-900">Analisis RPM Pertemuan 2</h3>
+            <p class="text-sm text-gray-700">Penekanan pada pemecahan masalah dan variasi media kuis interaktif.</p>
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
 
-    <!-- SECTION SAMBUTAN -->
-    <section class="py-10 px-6">
-      <div class="max-w-4xl mx-auto text-center space-y-3">
-        <h2 class="text-2xl font-bold text-gray-800">Selamat Datang di Portofolio Digital</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-          Website ini memuat analisis rancangan pembelajaran, materi, media, video pelaksanaan mengajar, kegiatan non-mengajar, serta instrumen penilaian dan refleksi diri.
-        </p>
+    <!-- TAB 5: PRAKTIK & NON-MENGAJAR -->
+    <div id="tab-praktik" class="tab-content hidden">
+      <div class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+        <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-6 text-center shadow-lg">
+          <h1 class="text-3xl font-extrabold uppercase">PRAKTIK & NON-MENGAJAR</h1>
+        </div>
+        <div class="bg-white rounded-3xl shadow-md p-6 border border-gray-100 space-y-4">
+          <h3 class="text-xl font-bold text-red-900">Video Praktik Mengajar</h3>
+          <div class="aspect-w-16 aspect-h-9 w-full rounded-2xl overflow-hidden shadow-lg bg-black h-64 md:h-96">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Mengajar" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- TAB 6: PENILAIAN -->
+    <div id="tab-penilaian" class="tab-content hidden">
+      <div class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+        <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-6 text-center shadow-lg">
+          <h1 class="text-3xl font-extrabold uppercase">INSTRUMEN PENILAIAN</h1>
+        </div>
+        <div class="bg-white rounded-3xl shadow-md p-6 border border-gray-100">
+          <h3 class="text-xl font-bold text-red-900">Analisis Asesmen Formatif</h3>
+          <p class="text-sm text-gray-700 mt-2">Penilaian mencakup rubrik analitik aspek sikap, pengetahuan, serta keterampilan proses.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: REFLEKSI -->
+    <div id="tab-refleksi" class="tab-content hidden">
+      <div class="max-w-4xl mx-auto px-6 py-8 space-y-8">
+        <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-6 text-center shadow-lg">
+          <h1 class="text-3xl font-extrabold uppercase">REFLEKSI DIRI</h1>
+        </div>
+        <section class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 text-center shadow-xl space-y-4">
+          <h2 class="text-3xl font-extrabold text-amber-300 italic">Terima Kasih</h2>
+          <blockquote class="text-lg italic font-light max-w-xl mx-auto text-red-100">"Saya ingin setiap ilmu yang saya punya dapat bermanfaat luas bagi banyak orang."</blockquote>
+        </section>
+      </div>
+    </div>
+
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
+  <footer class="bg-gray-900 text-gray-400 text-center py-4 text-sm border-t border-gray-800">
     <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT MEMANGGIL HEADER & MENANDAI MENU AKTIF -->
+  <!-- SCRIPT LOGIKA SPA & FULLSCREEN (NO RELOAD) -->
   <script>
-    fetch('components/header.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        const links = document.querySelectorAll('#header-placeholder a');
-        links.forEach(link => {
-          if (link.getAttribute('href') === currentPage) {
-            link.classList.add('nav-btn-active');
-            link.classList.remove('border-transparent', 'border-gray-300');
-          }
+    function switchTab(tabId) {
+      // Sembunyikan semua tab
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+      
+      // Tampilkan tab yang dipilih
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+      // Reset style semua tombol
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('nav-btn-active'));
+      
+      // Aktifkan tombol yang diklik
+      document.getElementById('btn-' + tabId).classList.add('nav-btn-active');
+
+      // Scroll ke atas dengan mulus
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          alert(`Gagal Fullscreen: ${err.message}`);
         });
-      });
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    }
   </script>
 
 </body>
