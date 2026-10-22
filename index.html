@@ -39,7 +39,7 @@
     <!-- WADAH HEADER OTOMATIS (FLOATING BAR DESKTOP & MOBILE) -->
     <div id="header-placeholder" class="w-full"></div>
 
-    <!-- MAIN CONTAINER (SUDAH DIPERBAIKI: OVERFLOW-Y-AUTO DI SEMUA UKURAN LAYAR) -->
+    <!-- MAIN CONTAINER -->
     <main id="portfolio-container" class="w-full max-w-6xl mx-auto my-auto flex-grow flex items-start justify-center min-h-[calc(100vh-6rem)] max-h-[calc(100vh-6rem)] overflow-y-auto">
         <!-- File dari folder pages/ akan masuk ke sini via Fetch -->
     </main>
@@ -49,7 +49,7 @@
         <p>&copy; 2026 E-Portfolio PPG Calon Guru. All rights reserved.</p>
     </footer>
 
-    <!-- SCRIPT SINGLE PAGE APPLICATION & NAVIGASI SEAMLESS -->
+    <!-- SCRIPT SINGLE PAGE APPLICATION & LOGIKA FULLSCREEN UNIVERSAL -->
     <script>
         const pagesList = [
             'beranda.html',
@@ -64,10 +64,16 @@
         async function initHeader() {
             try {
                 const res = await fetch('components/header.html');
-                if (res.ok) {
-                    document.getElementById('header-placeholder').innerHTML = await res.text();
-                    switchTab('beranda.html');
-                }
+                if (!res.ok) throw new Error("File components/header.html tidak ditemukan");
+                
+                const headerHtml = await res.text();
+                document.getElementById('header-placeholder').innerHTML = headerHtml;
+                
+                // Pasang event listener ke tombol Fullscreen
+                setupFullscreenButton();
+                
+                // Load halaman awal
+                switchTab('beranda.html');
             } catch (err) {
                 console.error("Gagal memuat header:", err);
             }
@@ -84,7 +90,7 @@
                 container.innerHTML = html;
                 updateHeaderButtons(pageFile);
                 
-                // Reset posisi scroll kontainer utama ke paling atas tiap ganti menu
+                // Reset posisi scroll kontainer utama ke paling atas
                 container.scrollTop = 0;
             } catch (err) {
                 container.innerHTML = `
@@ -119,6 +125,58 @@
                 }
             });
         }
+
+        // 4. LOGIKA FULLSCREEN
+        function setupFullscreenButton() {
+            const btnFS = document.getElementById('btn-fullscreen-toggle');
+            if (!btnFS) return;
+
+            btnFS.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const doc = document;
+                const docEl = document.documentElement;
+
+                const requestFS = docEl.requestFullscreen || docEl.webkitRequestFullscreen || docEl.mozRequestFullScreen || docEl.msRequestFullscreen;
+                const exitFS = doc.exitFullscreen || doc.webkitExitFullscreen || doc.mozCancelFullScreen || doc.msExitFullscreen;
+                const isFS = doc.fullscreenElement || doc.webkitFullscreenElement || doc.mozFullScreenElement || doc.msFullscreenElement;
+
+                if (!isFS) {
+                    if (requestFS) {
+                        requestFS.call(docEl).catch(err => alert("Layar penuh tidak diizinkan oleh browser: " + err.message));
+                    }
+                } else {
+                    if (exitFS) {
+                        exitFS.call(doc);
+                    }
+                }
+            });
+        }
+
+        // 5. UPDATE IKON FULLSCREEN
+        function updateFullscreenIcons() {
+            const iconExpand = document.getElementById('icon-expand');
+            const iconCollapse = document.getElementById('icon-collapse');
+            const isFS = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
+
+            if (iconExpand && iconCollapse) {
+                if (isFS) {
+                    iconExpand.classList.remove('block');
+                    iconExpand.classList.add('hidden');
+                    iconCollapse.classList.remove('hidden');
+                    iconCollapse.classList.add('block');
+                } else {
+                    iconExpand.classList.remove('hidden');
+                    iconExpand.classList.add('block');
+                    iconCollapse.classList.remove('block');
+                    iconCollapse.classList.add('hidden');
+                }
+            }
+        }
+
+        ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'].forEach(event => {
+            document.addEventListener(event, updateFullscreenIcons);
+        });
 
         window.addEventListener('DOMContentLoaded', initHeader);
     </script>
