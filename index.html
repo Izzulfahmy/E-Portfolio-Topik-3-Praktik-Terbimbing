@@ -64,10 +64,7 @@
                 const headerHtml = await res.text();
                 document.getElementById('header-placeholder').innerHTML = headerHtml;
                 
-                // Pasang event listener ke tombol Fullscreen
                 setupFullscreenButton();
-                
-                // Load halaman awal
                 switchTab('beranda.html');
             } catch (err) {
                 console.error("Gagal memuat header:", err);
@@ -84,9 +81,13 @@
                 
                 container.innerHTML = html;
                 updateHeaderButtons(pageFile);
-                
-                // Reset posisi scroll kontainer utama ke paling atas
                 container.scrollTop = 0;
+
+                // JIKA HALAMAN Selesai Dimuat & YANG DIBUKA ADALAH pembelajaran.html, BIND EVENT TAB PERTEMUAN
+                if (pageFile === 'pembelajaran.html') {
+                    setupPembelajaranSubTabs();
+                }
+
             } catch (err) {
                 container.innerHTML = `
                     <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center w-full shadow-sm">
@@ -96,9 +97,34 @@
             }
         }
 
-        // 3. Update Status Warna Tombol Aktif
+        // 3. FUNGSI KHUSUS BINDING EVENT KLIK SUB-TAB DI PAGE PEMBELAJARAN
+        function setupPembelajaranSubTabs() {
+            const btnP1 = document.getElementById('tab-btn-p1');
+            const btnP2 = document.getElementById('tab-btn-p2');
+            const p1Content = document.getElementById('content-p1');
+            const p2Content = document.getElementById('content-p2');
+
+            if (!btnP1 || !btnP2 || !p1Content || !p2Content) return;
+
+            btnP1.onclick = function() {
+                p1Content.classList.remove('hidden');
+                p2Content.classList.add('hidden');
+
+                btnP1.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer bg-white text-blue-700 shadow-sm border-0 outline-none";
+                btnP2.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+            };
+
+            btnP2.onclick = function() {
+                p1Content.classList.add('hidden');
+                p2Content.classList.remove('hidden');
+
+                btnP2.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer bg-white text-purple-700 shadow-sm border-0 outline-none";
+                btnP1.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+            };
+        }
+
+        // 4. Update Status Warna Tombol Aktif Header
         function updateHeaderButtons(activeFile) {
-            // Desktop Header
             const desktopButtons = document.querySelectorAll('#header-placeholder nav button.tab-btn');
             desktopButtons.forEach(btn => {
                 const onclickAttr = btn.getAttribute('onclick') || '';
@@ -109,7 +135,6 @@
                 }
             });
 
-            // Mobile Bottom Nav
             const mobileButtons = document.querySelectorAll('#header-placeholder nav button.tab-btn-mobile');
             mobileButtons.forEach(btn => {
                 const onclickAttr = btn.getAttribute('onclick') || '';
@@ -121,7 +146,7 @@
             });
         }
 
-        // 4. LOGIKA FULLSCREEN
+        // 5. LOGIKA FULLSCREEN
         function setupFullscreenButton() {
             const btnFS = document.getElementById('btn-fullscreen-toggle');
             if (!btnFS) return;
@@ -148,7 +173,7 @@
             });
         }
 
-        // 5. UPDATE IKON FULLSCREEN
+        // 6. UPDATE IKON FULLSCREEN
         function updateFullscreenIcons() {
             const iconExpand = document.getElementById('icon-expand');
             const iconCollapse = document.getElementById('icon-collapse');
