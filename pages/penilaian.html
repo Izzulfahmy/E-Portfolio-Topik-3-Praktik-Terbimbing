@@ -1,90 +1,268 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instrumen Penilaian - E-Portfolio PPG</title>
-  
-  <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
+<div class="w-full max-w-6xl mx-auto py-4 md:py-6 px-2 sm:px-4 space-y-6">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    .nav-btn-active {
-      background-color: #991b1b;
-      color: white !important;
-      border-color: #991b1b !important;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 pt-28 md:pt-32 min-h-screen flex flex-col justify-between">
+  <!-- HEADER SECTION -->
+  <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-800 relative overflow-hidden">
+    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Instrumen Penilaian PPL
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">Lembar Penilaian Perangkat & Praktik Mengajar</h1>
+        <p class="text-slate-300 text-xs md:text-sm mt-1 max-w-2xl">
+          Hasil evaluasi resmi penyusunan modul ajar (Lampiran 7) dan pelaksanaan praktik pembelajaran terbimbing (Lampiran 8) oleh Guru Pamong dan Dosen Pembimbing Lapangan.
+        </p>
+      </div>
+      
+      <!-- IDENTITAS SINGKAT & PENGESAHAN -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 border border-white/10 text-xs space-y-1 self-stretch md:self-auto flex flex-col justify-center min-w-[220px]">
+        <div class="flex justify-between text-slate-300"><span>Mahasiswa:</span> <strong class="text-white">Muhammad Izzul Fahmi</strong></div>
+        <div class="flex justify-between text-slate-300"><span>NIM:</span> <strong class="text-white">250211920117</strong></div>
+        <div class="flex justify-between text-slate-300"><span>Guru Pamong:</span> <strong class="text-amber-300">Anita Adi Susilowati, S.Pd, M.Pd</strong></div>
+        <div class="flex justify-between text-slate-300"><span>DPL:</span> <strong class="text-amber-300">Rizki Putri Wardani, M.Pd</strong></div>
+        <div class="flex justify-between text-slate-300"><span>Satuan Pendidikan:</span> <strong class="text-emerald-400">UPTD SDN Tegal Besar 03</strong></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- WADAH HEADER OTOMATIS -->
-  <div id="header-placeholder"></div>
+  <!-- TOMBOL BUKA DRIVE FOLDER ASLI -->
+  <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <div class="p-2 bg-emerald-50 text-emerald-700 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+      </div>
+      <div>
+        <h3 class="font-extrabold text-sm text-slate-800">Folder Berkas Penilaian Terbimbing (Lampiran 7 & 8)</h3>
+        <p class="text-xs text-slate-500">Akses langsung ke folder Google Drive berisi pindaian dokumen penilaian berstempel dan bertanda tangan</p>
+      </div>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1hPQOgN4WCPbPulINquaHsTsb7eVKJ3ET?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition-all cursor-pointer whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <span>Buka Folder Google Drive</span>
+    </a>
+  </div>
 
-  <!-- KONTEN PENILAIAN -->
-  <main class="max-w-5xl mx-auto px-6 py-8 flex-grow space-y-12">
+  <!-- BAGIAN 1: LAMPIRAN 7 - PENILAIAN PERANGKAT PEMBELAJARAN -->
+  <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5 relative overflow-hidden">
+    <div class="w-1.5 h-full bg-blue-600 absolute left-0 top-0 bottom-0"></div>
     
-    <!-- BANNER JUDUL -->
-    <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 text-center shadow-lg">
-      <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">INSTRUMEN PENILAIAN</h1>
-      <p class="text-red-100 text-sm mt-2">Analisis Asesmen Formatif, Rubrik Penilaian, dan Hasil Evaluasi Belajar</p>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4 pl-2">
+      <div>
+        <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase">Lampiran 7</span>
+        <h2 class="text-lg md:text-xl font-extrabold text-slate-800 mt-1">Instrumen Penilaian Penyusunan Perangkat Pembelajaran</h2>
+        <p class="text-xs text-slate-500">Evaluasi kelengkapan modul ajar, materi, media, skenario, dan asesmen oleh Guru Pamong & DPL</p>
+      </div>
+      <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl self-start sm:self-auto">
+        Kategori: Sangat Baik (Skor 3-4)
+      </span>
     </div>
 
-    <!-- ANALISIS PERTEMUAN 1 -->
-    <section class="bg-white rounded-3xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-      <div class="flex justify-center">
-        <img src="assets/penilaian-1.jpg" alt="Instrumen Penilaian Pertemuan 1" class="h-64 object-contain rounded-2xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+1'">
+    <!-- TABEL DETIL LAMPIRAN 7 -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs border-collapse">
+        <thead>
+          <tr class="bg-slate-100/80 text-slate-700 uppercase font-extrabold border-b border-slate-200">
+            <th class="p-3 w-12 text-center">No</th>
+            <th class="p-3 w-40">Aspek Penilaian</th>
+            <th class="p-3 w-44">Indikator</th>
+            <th class="p-3">Deskriptor Penilaian</th>
+            <th class="p-3 w-16 text-center">Skor</th>
+            <th class="p-3 w-48">Catatan Guru Pamong</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-slate-600">
+          
+          <!-- ASPEK 1 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800" rowspan="3">1</td>
+            <td class="p-3 font-bold text-slate-800" rowspan="3">Identitas &amp; Kompetensi</td>
+            <td class="p-3 font-semibold">Kelengkapan Identitas</td>
+            <td class="p-3">Memuat mata pelajaran, jenjang pendidikan, kelas, semester, alokasi waktu, dan tanggal pelaksanaan.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Sudah ada kelengkapan identitas.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Kompetensi (CP/KD)</td>
+            <td class="p-3">Memuat SK, KD, CP, dan indikator pembelajaran sesuai dengan standar isi / tujuan. Memuat level kemampuan murid berdasarkan hasil observasi.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Sudah memuat tujuan pembelajaran sesuai observasi awal.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Tujuan Pembelajaran</td>
+            <td class="p-3">Memuat tujuan dengan menggunakan kata kerja Bloom Taxonomy / Taksonomi SOLO.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Baik, sudah dalam menetapkan taksonomi SOLO.</td>
+          </tr>
+
+          <!-- ASPEK 2 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800" rowspan="3">2</td>
+            <td class="p-3 font-bold text-slate-800" rowspan="3">Pengembangan Materi, Bahan, Sumber &amp; Media Belajar</td>
+            <td class="p-3 font-semibold">Pengembangan Materi &amp; Bahan</td>
+            <td class="p-3">Cakupan materi sesuai KD/CP dan hasil observasi. Materi berdasarkan kajian teori dan menggunakan teknik scaffolding. Isi bahan ajar memuat materi dan instruksi yang diperlukan.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Sesuai materi dan observasi, serta sesuai teknik scaffolding dan bahan ajar yang dipelajari.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Sumber Belajar</td>
+            <td class="p-3">Sumber belajar sesuai dengan KD dan tujuan pembelajaran, serta dipilih berdasarkan level kemampuan/pemahaman peserta didik.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Sumber belajar sesuai tujuan pembelajaran dan kemampuan murid.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Media Belajar</td>
+            <td class="p-3">Media pembelajaran disajikan berdasarkan kondisi lingkungan belajar dan kebutuhan murid secara bervariasi.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Media sesuai dengan kondisi lingkungan belajar dan sesuai kegiatan.</td>
+          </tr>
+
+          <!-- ASPEK 3 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800" rowspan="3">3</td>
+            <td class="p-3 font-bold text-slate-800" rowspan="3">Skenario Kegiatan Pembelajaran</td>
+            <td class="p-3 font-semibold">Kegiatan Pembuka</td>
+            <td class="p-3">Memuat kegiatan apersepsi untuk menghubungkan persepsi awal peserta didik dengan tujuan pembelajaran.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Bagus dalam apersepsi awal dan tujuan pembelajaran.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Kegiatan Inti</td>
+            <td class="p-3">Menuliskan tahapan kegiatan inti secara jelas dengan menerapkan teknik scaffolding, memiliki alokasi waktu teratur, dan menunjukkan interaksi aktif murid.</td>
+            <td class="p-3 text-center font-extrabold text-emerald-700 bg-emerald-50/50">4</td>
+            <td class="p-3 italic">Sesuai tahapan inti dengan jelas, ada waktu setiap tahap, dan menunjukkan interaksi dengan baik.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Kegiatan Penutup</td>
+            <td class="p-3">Memuat simpulan akhir yang direfleksikan bersama serta memuat rencana tindak lanjut pembelajaran (tugas pemantapan/reviu).</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Dapat menyimpulkan bersama murid dan merencanakan tindak lanjut.</td>
+          </tr>
+
+          <!-- ASPEK 4 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800">4</td>
+            <td class="p-3 font-bold text-slate-800">Penilaian / Asesmen</td>
+            <td class="p-3 font-semibold">Kesesuaian Kompetensi</td>
+            <td class="p-3">Alat penilaian sesuai dengan KD/CP, tujuan pembelajaran, dan kemampuan peserta didik. Instruksi asesmen jelas terperinci disertai kunci/kisi-kisi jawaban dan rubrik.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Ada penilaian sesuai TP, terperinci, serta dilengkapi kisi-kisi dan rubrik.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- BAGIAN 2: LAMPIRAN 8 - PENILAIAN PRAKTIK MENGAJAR TERBIMBING -->
+  <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5 relative overflow-hidden">
+    <div class="w-1.5 h-full bg-emerald-600 absolute left-0 top-0 bottom-0"></div>
+    
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-4 pl-2">
+      <div>
+        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase">Lampiran 8</span>
+        <h2 class="text-lg md:text-xl font-extrabold text-slate-800 mt-1">Instrumen Penilaian Praktik Mengajar Terbimbing</h2>
+        <p class="text-xs text-slate-500">Evaluasi performa pelaksanaan pembelajaran langsung di kelas oleh Guru Pamong</p>
       </div>
-      <div class="md:col-span-2 space-y-3">
-        <span class="bg-red-50 text-red-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Pertemuan 1</span>
-        <h2 class="text-2xl font-bold text-red-900">Analisis Penilaian Pertemuan 1</h2>
-        <p class="text-sm text-gray-700 leading-relaxed">
-          Pada Pertemuan 1, instrumen penilaian disesuaikan dengan tujuan pembelajaran melalui asesmen diagnostik awal dan asesmen formatif saat pengerjaan LKPD. Penilaian dilengkapi rubrik analitik untuk mengukur aspek sikap, pengetahuan, serta keterampilan proses. Hasil asesmen kelompok menunjukkan mayoritas peserta didik mampu mencapai kriteria ketuntasan.
-        </p>
-      </div>
-    </section>
+      <span class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl self-start sm:self-auto">
+        Kategori: Sangat Baik &amp; Profesional
+      </span>
+    </div>
 
-    <!-- ANALISIS PERTEMUAN 2 -->
-    <section class="bg-white rounded-3xl shadow-md p-6 border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-      <div class="md:col-span-2 space-y-3 order-2 md:order-1">
-        <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Pertemuan 2</span>
-        <h2 class="text-2xl font-bold text-red-900">Analisis Penilaian Pertemuan 2</h2>
-        <p class="text-sm text-gray-700 leading-relaxed">
-          Pada Pertemuan 2, instrumen dikembangkan dengan memberikan porsi asesmen mandiri dan kuis singkat secara langsung. Penggunaan rubrik yang lebih terstruktur membantu mendeteksi pemahaman konsep secara individu, mengurangi ketergantungan pada hasil kerja kelompok, serta memberikan feedback cepat bagi siswa.
-        </p>
-      </div>
-      <div class="flex justify-center order-1 md:order-2">
-        <img src="assets/penilaian-2.jpg" alt="Instrumen Penilaian Pertemuan 2" class="h-64 object-contain rounded-2xl border shadow-sm" onerror="this.src='https://via.placeholder.com/200x280?text=Instrumen+Pertemuan+2'">
-      </div>
-    </section>
+    <!-- TABEL DETIL LAMPIRAN 8 -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs border-collapse">
+        <thead>
+          <tr class="bg-slate-100/80 text-slate-700 uppercase font-extrabold border-b border-slate-200">
+            <th class="p-3 w-12 text-center">No</th>
+            <th class="p-3 w-40">Aspek Penilaian</th>
+            <th class="p-3 w-44">Indikator</th>
+            <th class="p-3">Deskriptor Penilaian</th>
+            <th class="p-3 w-16 text-center">Skor</th>
+            <th class="p-3 w-48">Catatan Guru Pamong</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 text-slate-600">
+          
+          <!-- ASPEK 1 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800">1</td>
+            <td class="p-3 font-bold text-slate-800">Membuka Pelajaran</td>
+            <td class="p-3 font-semibold">Apersepsi &amp; Motivasi</td>
+            <td class="p-3">Mengaitkan tujuan pembelajaran dengan pengetahuan yang sudah dipelajari oleh murid atau pengalaman dalam kehidupan sehari-hari.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Sudah baik, telah mengaitkan materi dengan kehidupan sehari-hari dan melibatkan pengalaman murid.</td>
+          </tr>
 
-  </main>
+          <!-- ASPEK 2 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800" rowspan="4">2</td>
+            <td class="p-3 font-bold text-slate-800" rowspan="4">Melaksanakan Kegiatan Inti Pelajaran</td>
+            <td class="p-3 font-semibold">Metode Pembelajaran</td>
+            <td class="p-3">Metode pembelajaran mendorong murid aktif dan berkolaborasi dalam diskusi atau latihan di kelas.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Di kelas murid aktif merespon guru dengan baik, ada interaksi kolaborasi antara guru, murid, dan kelompoknya.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Ketepatan Materi / Konsep</td>
+            <td class="p-3">Materi disajikan sesuai KD/CP, sesuai level kemampuan murid berdasarkan observasi, dan mendemonstrasikan kompetensi yang harus dicapai.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Materi sesuai pembelajaran, sudah baik sesuai level kemampuan, baik dalam menyampaikan kompetensi.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Penguasaan Pelaksanaan</td>
+            <td class="p-3">Melakukan transisi kegiatan yang berkesinambungan, memberi umpan balik positif terhadap performa murid, serta menghargai pertanyaan/pendapat murid.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Baik dalam penguatan aktivitas murid, bagus merespon positif, dan menghargai pertanyaan murid.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Media Pembelajaran</td>
+            <td class="p-3">Menggunakan media pembelajaran secara efektif dan efisien sesuai TP, target pembelajaran, serta melibatkan partisipasi aktif murid.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Menggunakan media sesuai TP, media sudah efektif memenuhi target, dan melibatkan partisipasi siswa aktif.</td>
+          </tr>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
-    <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
-  </footer>
+          <!-- ASPEK 3 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800">3</td>
+            <td class="p-3 font-bold text-slate-800">Menutup Pembelajaran</td>
+            <td class="p-3 font-semibold">Refleksi &amp; Penilaian</td>
+            <td class="p-3">Mengakomodasi kesulitan murid di kelas, membantu membuat kesimpulan akhir materi, dan melakukan penilaian terhadap performa murid sesuai TP.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Respon guru membantu menyimpulkan materi sangat baik, serta melakukan penilaian sesuai performa murid.</td>
+          </tr>
 
-  <!-- SCRIPT MEMANGGIL HEADER & MENANDAI MENU AKTIF -->
-  <script>
-    fetch('components/header.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        const links = document.querySelectorAll('#header-placeholder a');
-        links.forEach(link => {
-          if (link.getAttribute('href') === currentPage) {
-            link.classList.add('nav-btn-active');
-            link.classList.remove('border-transparent', 'border-gray-300');
-          }
-        });
-      });
-  </script>
+          <!-- ASPEK 4 -->
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 text-center font-bold text-slate-800" rowspan="4">4</td>
+            <td class="p-3 font-bold text-slate-800" rowspan="4">Faktor Penunjang Performa Guru</td>
+            <td class="p-3 font-semibold">Penggunaan Bahasa</td>
+            <td class="p-3">Menggunakan bahasa yang jelas, lugas, dan mudah dipahami oleh peserta didik.</td>
+            <td class="p-3 text-center font-extrabold text-emerald-700 bg-emerald-50/50">4</td>
+            <td class="p-3 italic">Bahasa sangat jelas dan mudah dipahami oleh peserta didik.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Pengaturan Waktu</td>
+            <td class="p-3">Mengorganisasikan waktu dengan baik dari awal hingga akhir kegiatan pembelajaran.</td>
+            <td class="p-3 text-center font-extrabold text-blue-700 bg-blue-50/50">3</td>
+            <td class="p-3 italic">Waktu tepat dalam setiap kegiatan pembelajaran.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Kepercayaan Diri &amp; Sikap</td>
+            <td class="p-3">Menunjukkan kepercayaan diri yang tinggi serta memperlakukan murid dengan sangat baik, ramah, dan penyayang secara profesional.</td>
+            <td class="p-3 text-center font-extrabold text-emerald-700 bg-emerald-50/50">4</td>
+            <td class="p-3 italic">Percaya diri tinggi, hubungan dengan murid sangat baik dan penyayang.</td>
+          </tr>
+          <tr class="hover:bg-slate-50/80 transition-colors">
+            <td class="p-3 font-semibold">Penampilan Diri</td>
+            <td class="p-3">Berbusana formal, rapi, dan memberikan teladan penampilan yang sangat baik di sekolah.</td>
+            <td class="p-3 text-center font-extrabold text-emerald-700 bg-emerald-50/50">4</td>
+            <td class="p-3 italic">Berbusana formal dan penampilan sangat rapi.</td>
+          </tr>
 
-</body>
-</html>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
