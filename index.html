@@ -83,9 +83,11 @@
                 updateHeaderButtons(pageFile);
                 container.scrollTop = 0;
 
-                // JIKA HALAMAN Selesai Dimuat & YANG DIBUKA ADALAH pembelajaran.html, BIND EVENT TAB PERTEMUAN
+                // JIKALAU HALAMAN Selesai Dimuat, BIND EVENT UNTUK SUB-TAB MASING-MASING HALAMAN
                 if (pageFile === 'pembelajaran.html') {
                     setupPembelajaranSubTabs();
+                } else if (pageFile === 'praktik.html') {
+                    setupPraktikSubTabs();
                 }
 
             } catch (err) {
@@ -123,7 +125,33 @@
             };
         }
 
-        // 4. Update Status Warna Tombol Aktif Header
+        // 4. FUNGSI KHUSUS BINDING EVENT KLIK SUB-TAB DI PAGE PRAKTIK
+        function setupPraktikSubTabs() {
+            const btnMengajar = document.getElementById('tab-btn-praktik-mengajar');
+            const btnNonMengajar = document.getElementById('tab-btn-non-mengajar');
+            const contentMengajar = document.getElementById('content-praktik-mengajar');
+            const contentNonMengajar = document.getElementById('content-non-mengajar');
+
+            if (!btnMengajar || !btnNonMengajar || !contentMengajar || !contentNonMengajar) return;
+
+            btnMengajar.onclick = function() {
+                contentMengajar.classList.remove('hidden');
+                contentNonMengajar.classList.add('hidden');
+
+                btnMengajar.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer bg-white text-blue-700 shadow-sm border-0 outline-none";
+                btnNonMengajar.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+            };
+
+            btnNonMengajar.onclick = function() {
+                contentMengajar.classList.add('hidden');
+                contentNonMengajar.classList.remove('hidden');
+
+                btnNonMengajar.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer bg-white text-amber-700 shadow-sm border-0 outline-none";
+                btnMengajar.className = "w-1/2 py-2 px-4 rounded-xl text-xs md:text-sm font-bold transition-all cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+            };
+        }
+
+        // 5. Update Status Warna Tombol Aktif Header
         function updateHeaderButtons(activeFile) {
             const desktopButtons = document.querySelectorAll('#header-placeholder nav button.tab-btn');
             desktopButtons.forEach(btn => {
@@ -146,7 +174,7 @@
             });
         }
 
-        // 5. LOGIKA FULLSCREEN
+        // 6. LOGIKA FULLSCREEN
         function setupFullscreenButton() {
             const btnFS = document.getElementById('btn-fullscreen-toggle');
             if (!btnFS) return;
@@ -173,7 +201,7 @@
             });
         }
 
-        // 6. UPDATE IKON FULLSCREEN
+        // 7. UPDATE IKON FULLSCREEN
         function updateFullscreenIcons() {
             const iconExpand = document.getElementById('icon-expand');
             const iconCollapse = document.getElementById('icon-collapse');
