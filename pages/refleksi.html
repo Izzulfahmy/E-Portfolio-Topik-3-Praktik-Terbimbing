@@ -1,89 +1,175 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refleksi Diri - E-Portfolio PPG</title>
-  
-  <!-- FAVICON LOGO UNEJ DI TAB BROWSER -->
-  <link rel="icon" type="image/png" href="assets/logo.png">
+<div class="w-full max-w-6xl mx-auto py-4 md:py-6 px-2 sm:px-4 space-y-6">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    .nav-btn-active {
-      background-color: #991b1b;
-      color: white !important;
-      border-color: #991b1b !important;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 pt-28 md:pt-32 min-h-screen flex flex-col justify-between">
+  <!-- HEADER SECTION -->
+  <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-800 relative overflow-hidden">
+    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          Lembar Kerja (LK) 3
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">Refleksi Praktik Mengajar Terbimbing</h1>
+        <p class="text-slate-300 text-xs md:text-sm mt-1 max-w-2xl">
+          Analisis dan evaluasi pengalaman belajar pada Praktik Pengalaman Lapangan (PPL) Terbimbing di UPTD SDN Tegal Besar 03 Jember.
+        </p>
+      </div>
+      
+      <!-- IDENTITAS SINGKAT & PENGESAHAN -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-3 border border-white/10 text-xs space-y-1 self-stretch md:self-auto flex flex-col justify-center min-w-[220px]">
+        <div class="flex justify-between text-slate-300"><span>Mahasiswa:</span> <strong class="text-white">Muhammad Izzul Fahmi</strong></div>
+        <div class="flex justify-between text-slate-300"><span>NIM:</span> <strong class="text-white">250211920117</strong></div>
+        <div class="flex justify-between text-slate-300"><span>Guru Pamong:</span> <strong class="text-amber-300">Anita Adi Susilowati, S.Pd, M.Pd</strong></div>
+        <div class="flex justify-between text-slate-300"><span>DPL:</span> <strong class="text-amber-300">Rizki Putri Wardani, S.Pd, M.Pd</strong></div>
+        <div class="flex justify-between text-slate-300"><span>Tanggal Pengesahan:</span> <strong class="text-emerald-400">3 Agustus 2026</strong></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- WADAH HEADER OTOMATIS -->
-  <div id="header-placeholder"></div>
+  <!-- LINK BUKA DOKUMEN PDF REFLEKSI -->
+  <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <div class="p-2 bg-purple-50 text-purple-700 rounded-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+      </div>
+      <div>
+        <h3 class="font-extrabold text-sm text-slate-800">Dokumen Asli LK 3 Refleksi Praktik Mengajar Terbimbing</h3>
+        <p class="text-xs text-slate-500">Berkas pindaian lengkap beserta lembar pengesahan DPL dan Guru Pamong</p>
+      </div>
+    </div>
+    <a href="https://drive.google.com/file/d/1mXWfjshOnafn5wvYm4ymHODKbS1h0Pik/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-md transition-all cursor-pointer whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      <span>Buka Dokumen Asli PDF</span>
+    </a>
+  </div>
 
-  <!-- KONTEN REFLEKSI -->
-  <main class="max-w-4xl mx-auto px-6 py-8 flex-grow space-y-12">
-    
-    <!-- BANNER JUDUL -->
-    <div class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-8 text-center shadow-lg">
-      <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">REFLEKSI DIRI</h1>
-      <p class="text-red-100 text-sm mt-2">Evaluasi Pembelajaran & Catatan Perbaikan Diri</p>
+  <!-- BAGIAN A: REFLEKSI KEGIATAN PRAKTIK MENGAJAR TERBIMBING -->
+  <div class="space-y-6">
+    <div class="flex items-center gap-2 border-b-2 border-purple-600 pb-2">
+      <span class="w-3 h-3 rounded-full bg-purple-600"></span>
+      <h2 class="text-lg md:text-xl font-extrabold text-slate-800 uppercase tracking-wide">A. Refleksi Kegiatan Praktik Mengajar Terbimbing</h2>
     </div>
 
-    <!-- KARTU REFLEKSI DIRI -->
-    <section class="bg-white rounded-3xl shadow-lg p-8 border border-gray-100 flex flex-col md:flex-row gap-8 items-center">
-      <div class="w-full md:w-1/2 space-y-4">
-        <h2 class="text-2xl font-bold text-red-900 border-b-4 border-amber-400 pb-2 inline-block">Refleksi Pengalaman Praktik</h2>
-        <p class="text-gray-700 text-sm leading-relaxed">
-          Selama melaksanakan praktik pembelajaran mandiri, saya semakin menyadari bahwa menjadi guru bukan hanya tentang menyampaikan materi, tetapi juga memahami dinamika kelas dan karakter tiap peserta didik.
+    <!-- 1. AKTIVITAS PEMBELAJARAN YANG BERHASIL DILAKSANAKAN -->
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 relative overflow-hidden">
+      <div class="w-1.5 h-full bg-blue-600 absolute left-0 top-0 bottom-0"></div>
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3 pl-2">
+        <div class="p-2 bg-blue-50 text-blue-700 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-extrabold text-base md:text-lg text-slate-800">1. Aktivitas Pembelajaran yang Berhasil Dilaksanakan</h3>
+      </div>
+      
+      <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-3">
+        <p>
+          Seluruh tahapan aktivitas pembelajaran yang dirancang berbasis pendekatan pembelajaran mendalam yang mencakup aspek <strong>Mindful, Meaningful, dan Joyful Learning</strong> dapat terealisasi dengan sangat baik pada kedua mata pelajaran.
         </p>
-        <p class="text-gray-700 text-sm leading-relaxed">
-          Pengalaman ini mendorong saya untuk terus adaptif, responsif terhadap kebutuhan siswa, serta konsisten melakukan evaluasi diri guna menciptakan pengalaman belajar yang bermakna dan menyenangkan.
+        <p>
+          Pada mata pelajaran <strong>IPAS</strong> dengan materi <em>Mengenal Pancaindra</em>, pembelajaran diawali dengan kegiatan apersepsi yang kontekstual melalui diskusi pengalaman sarapan pagi siswa untuk memancing rasa ingin tahu mereka mengenai organ sensorik. Aktivitas utama "Detektif Pancaindra" berjalan dengan lancar, di mana siswa secara berkelompok mengamati, menggunting, dan mencocokkan berbagai gambar benda serta aktivitas ke dalam kolom jenis pancaindra yang sesuai pada lembar kerja. Siswa terlibat aktif dalam mengamati detail gambar visual, berdiskusi menentukan fungsi organ tubuh, hingga mempresentasikan hasil karya kelompoknya secara percaya diri di hadapan teman-teman sekelas.
+        </p>
+        <p>
+          Sementara itu, pada mata pelajaran <strong>Matematika</strong> dengan materi <em>Membandingkan dan Mengurutkan Bilangan Cacah Sampai 1.000</em>, penerapan model pembelajaran berbasis masalah berhasil mendekatkan konsep matematika yang abstrak menjadi nyata. Pembelajaran diawali dengan mengeksplorasi data riil siswa seperti perbandingan usia dan jumlah koleksi benda untuk membangun pemahaman konsep lebih awal. Keberhasilan utama pada pembelajaran ini ditunjukkan melalui pelaksanaan permainan interaktif "Math Battle", di mana siswa berkompetisi secara sportif untuk membandingkan dua nilai bilangan menggunakan gerakan tangan sebagai simbol perbandingan. Aktivitas ini terbukti efektif meningkatkan keterlibatan aktif, mengasah daya fokus, serta memantapkan pemahaman siswa sebelum mereka menyelesaikan tugas pemecahan masalah pada lembar kerja kelompok dan lembar kerja mandiri.
         </p>
       </div>
-      <div class="w-full md:w-1/2 flex justify-center">
-        <img src="assets/refleksi-foto.jpg" alt="Foto Refleksi di Kelas" class="rounded-2xl shadow-md border-4 border-amber-300 h-64 object-cover" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+Aktivitas+Kelas'">
+    </div>
+
+    <!-- 2. KENDALA DAN FAKTOR PENGHAMBAT -->
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 relative overflow-hidden">
+      <div class="w-1.5 h-full bg-amber-500 absolute left-0 top-0 bottom-0"></div>
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3 pl-2">
+        <div class="p-2 bg-amber-50 text-amber-700 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3 class="font-extrabold text-base md:text-lg text-slate-800">2. Kendala dalam Pelaksanaan Rancangan Pembelajaran</h3>
       </div>
-    </section>
+      
+      <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-3">
+        <p>
+          Meskipun secara keseluruhan proses pembelajaran berlangsung dinamis dan sesuai dengan alur Rencana Pembelajaran Mendalam, terdapat beberapa dinamika dan kendala teknis yang dihadapi selama pelaksanaan pembelajaran di kelas.
+        </p>
+        <p>
+          Pada mata pelajaran <strong>IPAS</strong>, kendala utama terletak pada alokasi manajemen waktu saat pelaksanaan aktivitas fisik menggunting dan menempel. Keterampilan motorik halus siswa kelas tiga yang beragam menyebabkan durasi pengumpulan dan penempelan gambar membutuhkan waktu yang lebih lama dari estimasi awal, sehingga alokasi waktu untuk tahap diskusi akhir dan penarikan kesimpulan menjadi cukup terbatas.
+        </p>
+        <p>
+          Pada mata pelajaran <strong>Matematika</strong>, antusiasme siswa yang sangat tinggi saat mengikuti permainan interaktif "Math Battle" sempat membuat suasana ruang kelas menjadi kurang kondusif dan riuh. Hal ini membutuhkan energi dan strategi pengondisian kelas ekstra agar perhatian siswa dapat kembali terpusat pada inti materi pembelajaran. Selain itu, ditemukan pula tantangan berupa tingkat pemahaman siswa yang tidak merata saat menyelesaikan tugas mengurutkan bilangan cacah tiga angka yang memiliki susunan angka mirip, sehingga beberapa siswa membutuhkan bimbingan individual yang lebih intensif agar tidak mengalami kekeliruan konsep nilai tempat.
+        </p>
+      </div>
+    </div>
 
-    <!-- SECTION TERIMA KASIH & QUOTE -->
-    <section class="bg-gradient-to-r from-red-900 via-red-800 to-amber-900 text-white rounded-3xl p-10 text-center shadow-xl space-y-4">
-      <h2 class="text-4xl font-extrabold text-amber-300 italic">Terima Kasih</h2>
-      <blockquote class="text-lg italic font-light max-w-xl mx-auto text-red-100">
-        "Saya ingin setiap ilmu yang saya punya dapat bermanfaat luas bagi banyak orang."
-      </blockquote>
-      <p class="text-xs text-amber-200 max-w-lg mx-auto pt-2">
-        Pengalaman PPL ini menjadi pengingat bahwa ilmu bukan hanya untuk disimpan sendiri, tetapi menjadi lebih bermakna saat dibagikan untuk membantu tumbuh kembang orang lain.
-      </p>
-    </section>
+    <!-- 3. REAKSI DAN KETERLIBATAN MURID -->
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 relative overflow-hidden">
+      <div class="w-1.5 h-full bg-emerald-600 absolute left-0 top-0 bottom-0"></div>
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3 pl-2">
+        <div class="p-2 bg-emerald-50 text-emerald-700 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-extrabold text-base md:text-lg text-slate-800">3. Reaksi dan Keterlibatan Murid di Kelas</h3>
+      </div>
+      
+      <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-3">
+        <p>
+          Reaksi dan keterlibatan murid selama proses pembelajaran berlangsung menunjukkan tingkat partisipasi dan antusiasme yang sangat tinggi pada kedua mata pelajaran.
+        </p>
+        <p>
+          Dalam pembelajaran <strong>IPAS</strong>, murid terlihat sangat senang dan fokus ketika terlibat dalam aktivitas kinestetik menggunting dan menempelkan gambar. Kehadiran media pembelajaran visual yang menarik mendorong murid untuk aktif berdiskusi dengan sesama anggota kelompoknya, saling bertukar pikiran untuk menentukan indra mana yang tepat digunakan untuk mengenali suatu benda, serta menunjukkan rasa bangga ketika memamerkan hasil kerja kelompok mereka di depan kelas.
+        </p>
+        <p>
+          Pada pembelajaran <strong>Matematika</strong>, keterlibatan murid terlihat sangat menonjol melalui suasana belajar yang gembira dan tidak menegangkan. Permainan "Math Battle" berhasil menghilangkan kesan bahwa matematika adalah pelajaran yang menakutkan, sehingga seluruh murid terdorong untuk berani tampil dan berkompetisi secara aktif. Murid tidak hanya berperan sebagai penerima informasi, tetapi juga secara kritis saling menanggapi presentasi kelompok lain dan menunjukkan semangat yang tinggi saat tertantang menyelesaikan soal-soal pemecahan masalah pada lembar kerja.
+        </p>
+      </div>
+    </div>
+  </div>
 
-  </main>
+  <!-- BAGIAN B: REFLEKSI PENGALAMAN BELAJAR -->
+  <div class="space-y-6 pt-4">
+    <div class="flex items-center gap-2 border-b-2 border-indigo-600 pb-2">
+      <span class="w-3 h-3 rounded-full bg-indigo-600"></span>
+      <h2 class="text-lg md:text-xl font-extrabold text-slate-800 uppercase tracking-wide">B. Refleksi Pengalaman Belajar</h2>
+    </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm border-t border-gray-800">
-    <p>&copy; 2026 E-Portfolio PPG Prajabatan. All rights reserved.</p>
-  </footer>
+    <!-- 1. UMPAN BALIK DARI GURU PAMONG -->
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 relative overflow-hidden">
+      <div class="w-1.5 h-full bg-indigo-600 absolute left-0 top-0 bottom-0"></div>
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3 pl-2">
+        <div class="p-2 bg-indigo-50 text-indigo-700 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+        </div>
+        <h3 class="font-extrabold text-base md:text-lg text-slate-800">1. Umpan Balik dari Guru Pamong</h3>
+      </div>
+      
+      <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-3">
+        <p>
+          Umpan balik dan arahan membangun yang diperoleh dari Guru Pamong berfokus pada efisiensi pengelolaan kelas serta penguatan strategi pendampingan siswa. Catatan utama yang diberikan menyoroti pentingnya penataan alokasi waktu secara lebih ketat, khususnya saat siswa melakukan aktivitas kelompok yang melibatkan keterampilan fisik atau eksplorasi mandiri. Penggunaan penanda waktu visual disarankan agar siswa memiliki kesadaran waktu yang lebih baik selama proses pengerjaan tugas, sehingga seluruh sintak pembelajaran dapat berjalan tepat waktu sesuai rencana.
+        </p>
+        <p>
+          Selain itu, arahan perbaikan juga berkaitan dengan manajemen suasana kelas saat menerapkan metode permainan interaktif. Sebelum memulai aktivitas berorientasi permainan, guru disarankan untuk membuat kesepakatan belajar bersama murid terlebih dahulu guna menjaga ketertiban tanpa mengurangi kegembiraan belajar. Guru juga diarahkan untuk memperkuat teknik perancah (<em>scaffolding</em>) dengan lebih aktif berputar mendampingi kelompok-kelompok yang membutuhkan bimbingan khusus, terutama bagi murid yang masih kesulitan memahami konsep-konsep abstrak.
+        </p>
+      </div>
+    </div>
 
-  <!-- SCRIPT MEMANGGIL HEADER & MENANDAI MENU AKTIF -->
-  <script>
-    fetch('components/header.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        const currentPage = window.location.pathname.split("/").pop() || "index.html";
-        const links = document.querySelectorAll('#header-placeholder a');
-        links.forEach(link => {
-          if (link.getAttribute('href') === currentPage) {
-            link.classList.add('nav-btn-active');
-            link.classList.remove('border-transparent', 'border-gray-300');
-          }
-        });
-      });
-  </script>
+    <!-- 2. RENCANA PERUBAHAN & PERBAIKAN RANCANGAN -->
+    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 relative overflow-hidden">
+      <div class="w-1.5 h-full bg-purple-600 absolute left-0 top-0 bottom-0"></div>
+      <div class="flex items-center gap-3 border-b border-slate-100 pb-3 pl-2">
+        <div class="p-2 bg-purple-50 text-purple-700 rounded-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </div>
+        <h3 class="font-extrabold text-base md:text-lg text-slate-800">2. Rencana Perubahan untuk Perancangan Pembelajaran Lebih Baik</h3>
+      </div>
+      
+      <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-3">
+        <p>
+          Apabila dilakukan penyempurnaan terhadap rancangan pembelajaran di masa mendatang, perubahan utama akan difokuskan pada optimalisasi media pembelajaran dan penataan strategi diferensiasi.
+        </p>
+        <p>
+          Pada materi <strong>IPAS</strong>, media berbasis guntingan gambar akan dimodifikasi menjadi bentuk lembar stiker atau pencocokan visual yang lebih praktis guna menghemat waktu pengerjaan tanpa mengurangi pengalaman belajar motorik siswa. Langkah ini akan memberikan ruang alokasi waktu yang lebih memadai untuk kegiatan refleksi serta pendalaman materi di akhir pembelajaran.
+        </p>
+        <p>
+          Perubahan berikutnya akan diterapkan pada struktur pelaksanaan permainan interaktif dalam pelajaran <strong>Matematika</strong> dengan menambahkan aturan pembagian peran dan giliran kelompok yang lebih terorganisasi, sehingga seluruh murid dapat berpartisipasi secara merata dan tertib. Selain itu, rancangan pembelajaran akan diperkaya dengan pemetaan strategi diferensiasi proses dan produk yang lebih jelas pada RPM. Hal ini bertujuan agar ragam kebutuhan belajar murid, baik yang membutuhkan pendampingan khusus maupun yang memerlukan tantangan pengayaan, dapat terfasilitasi secara optimal di dalam kelas.
+        </p>
+      </div>
+    </div>
 
-</body>
-</html>
+  </div>
+
+</div>
