@@ -24,12 +24,17 @@
     </div>
   </div>
 
-  <!-- TAB SELECTION -->
-  <div class="flex items-center justify-center bg-slate-200/80 p-1.5 rounded-2xl max-w-md mx-auto shadow-inner">
-    <button type="button" id="tab-btn-p1" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none">
+  <!-- TAB SELECTION TIMBUL (3D PILL BUTTONS) -->
+  <div class="flex items-center justify-center gap-3 max-w-md mx-auto py-2">
+    <!-- TOMBOL PERTEMUAN 1 (AKTIF SECARA DEFAULT) -->
+    <button type="button" id="tab-btn-p1" class="w-1/2 py-2.5 px-4 rounded-2xl text-xs md:text-sm font-extrabold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer bg-blue-600 text-white shadow-lg shadow-blue-500/30 border-b-4 border-blue-800 active:border-b-0 active:translate-y-1 outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25"/></svg>
       <span>Pertemuan 1 (IPAS)</span>
     </button>
-    <button type="button" id="tab-btn-p2" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none">
+    
+    <!-- TOMBOL PERTEMUAN 2 -->
+    <button type="button" id="tab-btn-p2" class="w-1/2 py-2.5 px-4 rounded-2xl text-xs md:text-sm font-extrabold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer bg-white text-slate-600 hover:text-slate-800 shadow-md border-b-4 border-slate-300 hover:border-slate-400 active:border-b-0 active:translate-y-1 outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
       <span>Pertemuan 2 (Matematika)</span>
     </button>
   </div>
@@ -156,7 +161,7 @@
         </div>
       </div>
 
-      <!-- 4. INSTRUMEN PENILAIAN DENGAN DESKRIPSI KUALITATIF -->
+      <!-- 4. INSTRUMEN PENILAIAN -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-amber-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-amber-900 border-b border-slate-100 pb-3 pl-2">
@@ -255,7 +260,7 @@
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Rancangan Pembelajaran Matematika ini menerapkan skenario Problem Based Learning berbasis masalah nyata kontekstual. Sintaks diawali dengan orientasi masalah kontekstual, pengorganisasian kelompok belajar, bimbingan penyelidikan numerasi, hingga penyajian hasil pemecahan masalah di depan kelas.
+            Rancangan Pembelajaran Matematika ini menerapkan skenario Problem Based Learning berbasis masalah nyata kontekstual. Sintaks diawali dengan orientasi masalah kontekstual, pengorganisasian kelompok belajar, bimbingan penyelidikan numerasi, hingga penyajikan hasil pemecahan masalah di depan kelas.
           </p>
           <p>
             Dalam konteks Deep Learning, pembelajaran memfasilitasi Meaningful Learning dengan memanfaatkan data nyata murid, Mindful Learning dengan menyadarkan murid tentang pentingnya matematika saat berbelanja, serta Joyful Learning lewat gim ketangkasan.
@@ -301,7 +306,7 @@
         </div>
       </div>
 
-      <!-- 4. INSTRUMEN PENILAIAN DENGAN DESKRIPSI KUALITATIF -->
+      <!-- 4. INSTRUMEN PENILAIAN -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-emerald-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-emerald-900 border-b border-slate-100 pb-3 pl-2">
@@ -326,10 +331,10 @@
 
 </div>
 
-<!-- SCRIPT PENGALIHAN TAB PERTEMUAN -->
+<!-- SCRIPT LOGIKA BINDING TAB DENGAN EFEK TIMBUL DIUBAH SECARA OTOMATIS -->
 <script>
   (function() {
-    function setupTabs() {
+    function initTabSystem() {
       const btnP1 = document.getElementById('tab-btn-p1');
       const btnP2 = document.getElementById('tab-btn-p2');
       const p1Content = document.getElementById('content-p1');
@@ -337,23 +342,33 @@
 
       if (!btnP1 || !btnP2 || !p1Content || !p2Content) return;
 
-      btnP1.addEventListener('click', function() {
+      // CLASS DESAIN TIMBUL
+      const activeClassP1 = "w-1/2 py-2.5 px-4 rounded-2xl text-xs md:text-sm font-extrabold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer bg-blue-600 text-white shadow-lg shadow-blue-500/30 border-b-4 border-blue-800 active:border-b-0 active:translate-y-1 outline-none";
+      const activeClassP2 = "w-1/2 py-2.5 px-4 rounded-2xl text-xs md:text-sm font-extrabold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer bg-purple-600 text-white shadow-lg shadow-purple-500/30 border-b-4 border-purple-800 active:border-b-0 active:translate-y-1 outline-none";
+      const inactiveClass = "w-1/2 py-2.5 px-4 rounded-2xl text-xs md:text-sm font-extrabold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer bg-white text-slate-600 hover:text-slate-800 shadow-md border-b-4 border-slate-300 hover:border-slate-400 active:border-b-0 active:translate-y-1 outline-none";
+
+      // EVENT KLIK PERTEMUAN 1
+      btnP1.onclick = function(e) {
+        e.preventDefault();
         p1Content.classList.remove('hidden');
         p2Content.classList.add('hidden');
 
-        btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none";
-        btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
-      });
+        btnP1.className = activeClassP1;
+        btnP2.className = inactiveClass;
+      };
 
-      btnP2.addEventListener('click', function() {
+      // EVENT KLIK PERTEMUAN 2
+      btnP2.onclick = function(e) {
+        e.preventDefault();
         p1Content.classList.add('hidden');
         p2Content.classList.remove('hidden');
 
-        btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-purple-700 shadow-md border-0 outline-none";
-        btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
-      });
+        btnP2.className = activeClassP2;
+        btnP1.className = inactiveClass;
+      };
     }
 
-    setupTabs();
+    // Eksekusi langsung
+    initTabSystem();
   })();
 </script>
