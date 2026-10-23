@@ -24,12 +24,12 @@
     </div>
   </div>
 
-  <!-- TAB SELECTION (PERTEMUAN 1 VS PERTEMUAN 2) -->
+  <!-- TAB SELECTION -->
   <div class="flex items-center justify-center bg-slate-200/80 p-1.5 rounded-2xl max-w-md mx-auto shadow-inner">
-    <button type="button" onclick="switchPertemuan('p1')" id="btn-p1" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none">
+    <button type="button" id="tab-btn-p1" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none">
       <span>Pertemuan 1 (IPAS)</span>
     </button>
-    <button type="button" onclick="switchPertemuan('p2')" id="btn-p2" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none">
+    <button type="button" id="tab-btn-p2" class="w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none">
       <span>Pertemuan 2 (Matematika)</span>
     </button>
   </div>
@@ -40,34 +40,34 @@
     <!-- CARD UTAMA: IDENTITAS RPM (KIRI) + PREVIEW PDF PORTRAIT (KANAN) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
       
-      <!-- IDENTITAS RPM IPAS (KIRI - 7 KOLOM) -->
+      <!-- IDENTITAS RPM IPAS -->
       <div class="lg:col-span-7 bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex flex-wrap items-center gap-2">
             <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Mata Pelajaran: IPAS</span>
-            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Kelas III / Fase B</span>
-            <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Alokasi: 2 JP (2x35 Menit)</span>
+            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Kelas III Fase B</span>
+            <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Alokasi 2 JP</span>
           </div>
 
           <div>
-            <h2 class="text-xl md:text-2xl font-extrabold text-slate-800">Bab 1: Keajaiban Tubuhku</h2>
-            <p class="text-sm font-semibold text-blue-700 mt-0.5">Topik: Mengenal Pancaindra Manusia & Fungsinya</p>
+            <h2 class="text-xl md:text-2xl font-extrabold text-slate-800">Bab 1 Keajaiban Tubuhku</h2>
+            <p class="text-sm font-semibold text-blue-700 mt-0.5">Topik Mengenal Pancaindra Manusia dan Fungsinya</p>
           </div>
 
           <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify">
-            Rancangan Pembelajaran Mendalam (RPM) pada mata pelajaran IPAS dirancang untuk memfasilitasi pemahaman holistik tentang lima pancaindra manusia (mata, telinga, hidung, lidah, dan kulit) beserta fungsinya dalam kehidupan sehari-hari melalui pengalaman belajar kontekstual dan eksploratif.
+            Rancangan Pembelajaran Mendalam pada mata pelajaran IPAS dirancang untuk memfasilitasi pemahaman holistik tentang lima pancaindra manusia beserta fungsinya dalam kehidupan sehari-hari melalui pengalaman belajar kontekstual dan eksploratif.
           </p>
 
           <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 space-y-2 text-xs text-slate-600">
             <div class="flex items-center gap-2 text-slate-800 font-bold border-b border-slate-200 pb-1.5">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Ringkasan Pendekatan & Metode</span>
+              <span>Ringkasan Pendekatan dan Metode</span>
             </div>
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <div><strong class="text-slate-800">Model:</strong> CTL (Contextual Teaching)</div>
+              <div><strong class="text-slate-800">Model:</strong> Contextual Teaching</div>
               <div><strong class="text-slate-800">Pendekatan:</strong> Deep Learning</div>
-              <div><strong class="text-slate-800">Metode:</strong> Sorting Activity & Diskusi</div>
-              <div><strong class="text-slate-800">Sifat Tugas:</strong> Kelompok & Mandiri</div>
+              <div><strong class="text-slate-800">Metode:</strong> Sorting Activity</div>
+              <div><strong class="text-slate-800">Sifat Tugas:</strong> Kelompok dan Mandiri</div>
             </div>
           </div>
         </div>
@@ -76,21 +76,19 @@
         <div class="pt-2">
           <a href="https://drive.google.com/file/d/1AM_u6eCy1zpzvHNZA-vrk48xmsS4j9bM/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs md:text-sm py-3 px-5 rounded-2xl shadow-md transition-all cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-            <span>Buka Dokumen RPM IPAS (PDF)</span>
+            <span>Buka Dokumen PDF</span>
           </a>
         </div>
       </div>
 
-      <!-- PREVIEW PDF PORTRAIT KECIL (KANAN - 5 KOLOM) -->
+      <!-- PREVIEW PDF -->
       <div class="lg:col-span-5 bg-white rounded-3xl p-3 md:p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
         <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
           <span class="text-xs font-extrabold text-slate-700 flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-blue-600"></span> Pratinjau Dokumen
           </span>
-          <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Format Portrait</span>
         </div>
         
-        <!-- FRAME PORTRAIT UKURAN KECIL PROPORIONAL -->
         <div class="w-full h-[380px] md:h-[420px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-inner">
           <iframe src="https://drive.google.com/file/d/1AM_u6eCy1zpzvHNZA-vrk48xmsS4j9bM/preview" class="w-full h-full border-0" allow="autoplay"></iframe>
         </div>
@@ -101,21 +99,21 @@
     <!-- GRID 4 POIN ANALISIS DETAIL PEMBELAJARAN IPAS -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <!-- 1. ANALISIS PERENCANAAN / RANCANGAN (RPM) -->
+      <!-- 1. ANALISIS PERENCANAAN -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-blue-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-blue-900 border-b border-slate-100 pb-3 pl-2">
           <div class="p-2 bg-blue-50 text-blue-700 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h3 class="font-extrabold text-base text-slate-800">1. Analisis Rancangan Pembelajaran (RPM)</h3>
+          <h3 class="font-extrabold text-base text-slate-800">1. Analisis Rancangan Pembelajaran</h3>
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Rancangan Pembelajaran Mendalam (RPM) dikembangkan secara sistematis mengacu pada Kurikulum Merdeka dengan mengintegrasikan model <strong>Contextual Teaching and Learning (CTL)</strong> dan prinsip <strong>Deep Learning</strong>. Sintaks pembelajaran dirancang runtut melewati 6 tahapan utama: <i>Constructivism</i> (membangun apersepsi awal), <i>Inquiry</i> (menganalisis fungsi panca indra), <i>Questioning</i> (diskusi kritis antar kelompok), <i>Learning Community</i> (kolaborasi kelompok heterogen), <i>Modeling</i> (presentasi unjuk kerja), hingga <i>Authentic Assessment</i> (evaluasi mandiri).
+            Rancangan Pembelajaran Mendalam dikembangkan mengacu pada Kurikulum Merdeka dengan mengintegrasikan model Contextual Teaching and Learning serta prinsip Deep Learning. Sintaks pembelajaran dirancang runtut melewati enam tahapan utama yaitu Constructivism, Inquiry, Questioning, Learning Community, Modeling, hingga Authentic Assessment.
           </p>
           <p>
-            Perencanaan menekankan tiga aspek esensial: <strong>Mindful Learning</strong> (membawa kesadaran diri peserta didik tentang pentingnya panca indra untuk menjaga keselamatan), <strong>Meaningful Learning</strong> (menghubungkan konsep sains dengan benda-benda nyata yang sering dijumpai sehari-hari), serta <strong>Joyful Learning</strong> melalui kompetisi kelompok yang dinamis.
+            Perencanaan menekankan tiga aspek esensial yaitu Mindful Learning untuk membawa kesadaran diri tentang pentingnya panca indra bagi keselamatan, Meaningful Learning untuk menghubungkan konsep sains dengan benda di sekitar, serta Joyful Learning melalui eksplorasi kelompok yang interaktif.
           </p>
         </div>
       </div>
@@ -131,10 +129,10 @@
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Materi pembelajaran difokuskan pada pemahaman organ panca indra manusia (mata, telinga, hidung, lidah, dan kulit) beserta fungsi spesifiknya dalam memproses stimulus lingkungan. Pengorganisasian materi disusun berjenjang mulai dari pengenalan struktur organ fisik, klasifikasi jenis rangsangan (cahaya, suara, bau, rasa, dan tekstur/suhu), hingga analisis peran indra sebagai pelindung tubuh.
+            Materi pembelajaran difokuskan pada pemahaman organ panca indra manusia yaitu mata, telinga, hidung, lidah, dan kulit beserta fungsinya dalam memproses rangsangan lingkungan. Pengorganisasian materi disusun berjenjang mulai dari pengenalan organ fisik hingga klasifikasi jenis rangsangan.
           </p>
           <p>
-            Materi dikemas secara lintas disiplin ilmu bersama mata pelajaran <strong>Bahasa Indonesia</strong> (keterampilan menyimak instruksi dan mengomunikasikan hasil pengamatan lisan/tulisan) serta <strong>Seni Rupa</strong> (pengembangan motorik halus saat memadankan, menggunting, dan menata posisi gambar secara presisi pada LKPD kelompok).
+            Materi dikemas secara lintas disiplin ilmu bersama mata pelajaran Bahasa Indonesia untuk keterampilan mengomunikasikan hasil pengamatan serta Seni Rupa untuk pengembangan motorik halus saat menata media gambar.
           </p>
         </div>
       </div>
@@ -150,29 +148,29 @@
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Media utama yang diterapkan berupa kit pembelajaran manipulatif <strong>"Detektif Pancaindra"</strong> berbasis aktivitas *Sorting Activity* (Gunting dan Tempel) yang dirancang menggunakan platform visual Canva. Media ini menyajikan 30 jenis gambar aktivitas dan benda konkret yang variatif (makanan, instrumen musik, aroma bunga, hingga objek bertekstur).
+            Media utama berupa kit pembelajaran Detektif Pancaindra berbasis aktivitas menggunting dan menempel yang dirancang menggunakan platform visual Canva. Media ini menyajikan gambar aktivitas dan benda konkret yang bervariasi.
           </p>
           <p>
-            Penggunaan media konkret dan visual ini terbukti secara signifikan meningkatkan keterlibatan aktif (*student engagement*) peserta didik usia Fase B. Media tidak hanya merangsang kecerdasan visual-spasial dan kinestetik, tetapi juga memicu diskusi argumentatif antar anggota kelompok dalam menentukan kolom organ yang paling tepat.
+            Penggunaan media ini terbukti meningkatkan keterlibatan aktif peserta didik, merangsang kecerdasan visual, serta memicu diskusi dalam menentukan kelompok organ yang tepat.
           </p>
         </div>
       </div>
 
-      <!-- 4. INSTRUMEN PENILAIAN & ANALISIS -->
+      <!-- 4. INSTRUMEN PENILAIAN DENGAN DESKRIPSI KUALITATIF -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-amber-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-amber-900 border-b border-slate-100 pb-3 pl-2">
           <div class="p-2 bg-amber-50 text-amber-700 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-extrabold text-base text-slate-800">4. Instrumen Penilaian & Analisis</h3>
+          <h3 class="font-extrabold text-base text-slate-800">4. Instrumen Penilaian dan Analisis</h3>
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Sistem asesmen disusun secara komprehensif mencakup tiga ranah evaluasi: <strong>Asesmen Kognitif Formatif</strong> melalui LKPD Mandiri (menghubungkan gambar indra dengan fungsi dan mengisi soal analisis singkat), <strong>Asesmen Psikomotor Unjuk Kerja</strong> (rubrik penilaian ketepatan penempelan gambar, kerapian tata letak, dan kelancaran presentasi), serta <strong>Asesmen Sikap Profil Pelajar Pancasila</strong> (observasi bernalar kritis, gotong royong, dan kemandirian).
+            Sistem asesmen mencakup Penilaian Kognitif Formatif melalui lembar kerja mandiri, Penilaian Psikomotor Unjuk Kerja melalui rubrik kerapian dan ketepatan penempelan gambar, serta Penilaian Sikap melalui observasi bernalar kritis dan gotong royong.
           </p>
           <p>
-            Hasil analisis penilaian menunjukkan bahwa 88% peserta didik mencapai kriteria ketuntasan tujuan pembelajaran secara mandiri. Bagi peserta didik yang belum tuntas diberikan lembar remedial bimbingan, sementara murid yang tuntas diberikan lembar pengayaan analisis kasus kontekstual.
+            Hasil analisis penilaian menunjukkan mayoritas peserta didik mampu memahami materi dengan sangat baik. Murid yang memerlukan pendampingan diberikan bimbingan ulang, sementara yang sudah mahir diberikan soal pengayaan.
           </p>
         </div>
       </div>
@@ -187,34 +185,34 @@
     <!-- CARD UTAMA: IDENTITAS RPM (KIRI) + PREVIEW PDF PORTRAIT (KANAN) -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
       
-      <!-- IDENTITAS RPM MATEMATIKA (KIRI - 7 KOLOM) -->
+      <!-- IDENTITAS RPM MATEMATIKA -->
       <div class="lg:col-span-7 bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="flex flex-wrap items-center gap-2">
             <span class="bg-purple-100 text-purple-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Mata Pelajaran: Matematika</span>
-            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Kelas III / Fase B</span>
-            <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Alokasi: 2 JP (2x35 Menit)</span>
+            <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Kelas III Fase B</span>
+            <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-0.5 rounded-md">Alokasi 2 JP</span>
           </div>
 
           <div>
-            <h2 class="text-xl md:text-2xl font-extrabold text-slate-800">Bab 1: Bilangan Cacah sampai 1.000</h2>
-            <p class="text-sm font-semibold text-purple-700 mt-0.5">Topik: Membandingkan & Mengurutkan Bilangan Cacah</p>
+            <h2 class="text-xl md:text-2xl font-extrabold text-slate-800">Bab 1 Bilangan Cacah sampai 1.000</h2>
+            <p class="text-sm font-semibold text-purple-700 mt-0.5">Topik Membandingkan dan Mengurutkan Bilangan Cacah</p>
           </div>
 
           <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify">
-            Modul pembelajaran Matematika difokuskan pada penanaman intuisi bilangan (*number sense*) melalui aktivitas membandingkan dua bilangan menggunakan simbol matematika (&gt;, &lt;, =) serta mengurutkan deretan bilangan dari terkecil ke terbesar maupun sebaliknya.
+            Modul pembelajaran Matematika difokuskan pada penanaman intuisi bilangan melalui aktivitas membandingkan dua bilangan menggunakan simbol matematika serta mengurutkan deretan bilangan dari terkecil ke terbesar maupun sebaliknya.
           </p>
 
           <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-100 space-y-2 text-xs text-slate-600">
             <div class="flex items-center gap-2 text-slate-800 font-bold border-b border-slate-200 pb-1.5">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Ringkasan Pendekatan & Metode</span>
+              <span>Ringkasan Pendekatan dan Metode</span>
             </div>
             <div class="grid grid-cols-2 gap-2 pt-1">
-              <div><strong class="text-slate-800">Model:</strong> PBL (Problem Based)</div>
+              <div><strong class="text-slate-800">Model:</strong> Problem Based Learning</div>
               <div><strong class="text-slate-800">Pendekatan:</strong> Deep Learning</div>
-              <div><strong class="text-slate-800">Metode:</strong> Game "Math Battle"</div>
-              <div><strong class="text-slate-800">Fokus:</strong> Number Sense & Logika</div>
+              <div><strong class="text-slate-800">Metode:</strong> Game Math Battle</div>
+              <div><strong class="text-slate-800">Fokus:</strong> Intuisi Bilangan dan Logika</div>
             </div>
           </div>
         </div>
@@ -223,21 +221,19 @@
         <div class="pt-2">
           <a href="https://drive.google.com/file/d/1R5owuNsLJVKI-xmXVS5_iYLsuD5-L9nQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs md:text-sm py-3 px-5 rounded-2xl shadow-md transition-all cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-            <span>Buka Dokumen RPM Matematika (PDF)</span>
+            <span>Buka Dokumen PDF</span>
           </a>
         </div>
       </div>
 
-      <!-- PREVIEW PDF PORTRAIT KECIL (KANAN - 5 KOLOM) -->
+      <!-- PREVIEW PDF -->
       <div class="lg:col-span-5 bg-white rounded-3xl p-3 md:p-4 border border-slate-200 shadow-sm flex flex-col justify-between">
         <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
           <span class="text-xs font-extrabold text-slate-700 flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-purple-600"></span> Pratinjau Dokumen
           </span>
-          <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Format Portrait</span>
         </div>
         
-        <!-- FRAME PORTRAIT UKURAN KECIL PROPORIONAL -->
         <div class="w-full h-[380px] md:h-[420px] rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 shadow-inner">
           <iframe src="https://drive.google.com/file/d/1R5owuNsLJVKI-xmXVS5_iYLsuD5-L9nQ/preview" class="w-full h-full border-0" allow="autoplay"></iframe>
         </div>
@@ -248,21 +244,21 @@
     <!-- GRID 4 POIN ANALISIS DETAIL PEMBELAJARAN MATEMATIKA -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-      <!-- 1. ANALISIS PERENCANAAN / RANCANGAN (RPM) -->
+      <!-- 1. ANALISIS PERENCANAAN -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-purple-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-purple-900 border-b border-slate-100 pb-3 pl-2">
           <div class="p-2 bg-purple-50 text-purple-700 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
-          <h3 class="font-extrabold text-base text-slate-800">1. Analisis Rancangan Pembelajaran (RPM)</h3>
+          <h3 class="font-extrabold text-base text-slate-800">1. Analisis Rancangan Pembelajaran</h3>
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Rancangan Pembelajaran Matematika ini menerapkan skenario <strong>Problem Based Learning (PBL)</strong> berbasis masalah nyata kontekstual. Sintaks diawali dengan orientasi pada masalah kontekstual (membandingkan usia antar teman dan membandingkan harga alat tulis), pengorganisasian kelompok belajar, bimbingan penyelidikan numerasi mandiri/kelompok, hingga pengembangan serta penyajian hasil pemecahan masalah di depan kelas.
+            Rancangan Pembelajaran Matematika ini menerapkan skenario Problem Based Learning berbasis masalah nyata kontekstual. Sintaks diawali dengan orientasi masalah kontekstual, pengorganisasian kelompok belajar, bimbingan penyelidikan numerasi, hingga penyajian hasil pemecahan masalah di depan kelas.
           </p>
           <p>
-            Dalam konteks <strong>Deep Learning</strong>, pembelajaran memfasilitasi <i>Meaningful Learning</i> dengan memanfaatkan data nyata murid (tanggal lahir, tinggi badan, harga jajanan), <i>Mindful Learning</i> dengan menyadarkan murid tentang pentingnya matematika saat berbelanja hemat, serta <i>Joyful Learning</i> lewat gim berbasis adu ketangkasan.
+            Dalam konteks Deep Learning, pembelajaran memfasilitasi Meaningful Learning dengan memanfaatkan data nyata murid, Mindful Learning dengan menyadarkan murid tentang pentingnya matematika saat berbelanja, serta Joyful Learning lewat gim ketangkasan.
           </p>
         </div>
       </div>
@@ -278,10 +274,10 @@
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Materi abstrak tentang nilai tempat (ratusan, puluhan, dan satuan) dikonstruksi secara kontekstual. Pembahasan berfokus pada dua kompetensi dasar: pertama, kemampuan membandingkan dua nilai bilangan 3 angka menggunakan relasi lebih besar (&gt;), lebih kecil (&lt;), atau sama dengan (=). Kedua, kemampuan menyusun dan mengurutkan deretan deret bilangan dari terkecil ke terbesar maupun sebaliknya.
+            Materi abstrak tentang nilai tempat dikonstruksi secara kontekstual. Pembahasan berfokus pada dua kompetensi yaitu kemampuan membandingkan dua nilai bilangan tiga angka menggunakan relasi lebih besar, lebih kecil, atau sama dengan, serta kemampuan menyusun deretan bilangan.
           </p>
           <p>
-            Materi dihubungkan secara erat dengan disiplin ilmu <strong>Pendidikan Pancasila</strong> (menanamkan nilai keadilan dan persatuan saat bertanding dalam kelompok) serta <strong>PJOK</strong> (aktivitas kinestetik gerakan tangan penanda simbol matematika).
+            Materi dihubungkan secara erat dengan disiplin ilmu Pendidikan Pancasila untuk menanamkan nilai keadilan saat bertanding serta PJOK untuk aktivitas kinestetik penanda simbol matematika.
           </p>
         </div>
       </div>
@@ -297,29 +293,29 @@
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Media inovatif yang dikembangkan adalah permainan interaktif bertajuk <strong>"Math Battle"</strong>. Guru membacakan pasangan bilangan cacah hingga 1.000, kemudian perwakilan kelompok secara adu cepat menentukan simbol matematika yang tepat menggunakan gerakan isyarat atau papan simbol khusus.
+            Media inovatif yang dikembangkan adalah permainan interaktif Math Battle. Guru membacakan pasangan bilangan cacah, kemudian perwakilan kelompok menentukan simbol matematika yang tepat menggunakan gerakan isyarat.
           </p>
           <p>
-            Penerapan media permainan ini terbukti mampu memecahkan kejenuhan murid dalam belajar matematika, membangun keberanian mengambil keputusan secara cepat dan tepat, serta memperkuat pemahaman konsep nilai tempat tanpa metode hafalan kaku.
+            Penerapan media ini terbukti mampu memecahkan kejenuhan murid dalam belajar matematika, membangun keberanian mengambil keputusan, serta memperkuat pemahaman konsep tanpa hafalan kaku.
           </p>
         </div>
       </div>
 
-      <!-- 4. INSTRUMEN PENILAIAN & ANALISIS -->
+      <!-- 4. INSTRUMEN PENILAIAN DENGAN DESKRIPSI KUALITATIF -->
       <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
         <div class="w-1.5 h-full bg-emerald-600 absolute left-0 top-0 bottom-0"></div>
         <div class="flex items-center gap-2.5 text-emerald-900 border-b border-slate-100 pb-3 pl-2">
           <div class="p-2 bg-emerald-50 text-emerald-700 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-extrabold text-base text-slate-800">4. Instrumen Penilaian & Analisis</h3>
+          <h3 class="font-extrabold text-base text-slate-800">4. Instrumen Penilaian dan Analisis</h3>
         </div>
         <div class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2 space-y-2">
           <p>
-            Instrumen penilaian dirancang komprehensif menggunakan <strong>Rubrik Kognitif Formatif</strong> (10 soal isian membandingkan dan mengurutkan angka pada LKPD Mandiri), <strong>Rubrik Asesmen Kelompok</strong> (penilaian keaktifan, kolaborasi, dan bernalar kritis HOTS), serta <strong>Rubrik Sikap Mandiri</strong>.
+            Instrumen penilaian dirancang komprehensif menggunakan Rubrik Kognitif Formatif pada lembar kerja mandiri, Rubrik Asesmen Kelompok untuk menilai partisipasi, serta Rubrik Sikap Mandiri.
           </p>
           <p>
-            Analisis hasil belajar menunjukkan peningkatan drastis dalam ketepatan memilih simbol perbandingan. Murid yang memerlukan bimbingan diberikan soal remedial dengan rentang angka lebih kecil (hingga 500), sedangkan murid berskor tinggi diberikan soal pengayaan logika matematika tinggi (*Higher Order Thinking Skills*).
+            Analisis hasil belajar menunjukkan peningkatan signifikan dalam ketepatan menentukan perbandingan bilangan. Murid yang memerlukan pendampingan diberikan bimbingan khusus, sedangkan murid yang cakap diberikan soal tantangan logika tingkat tinggi.
           </p>
         </div>
       </div>
@@ -330,28 +326,34 @@
 
 </div>
 
-<!-- SCRIPT PENGALIHAN TAB PERTEMUAN (DIPASTIKAN BERJALAN 100%) -->
+<!-- SCRIPT PENGALIHAN TAB PERTEMUAN -->
 <script>
-  function switchPertemuan(target) {
-    const p1Content = document.getElementById('content-p1');
-    const p2Content = document.getElementById('content-p2');
-    const btnP1 = document.getElementById('btn-p1');
-    const btnP2 = document.getElementById('btn-p2');
+  (function() {
+    function setupTabs() {
+      const btnP1 = document.getElementById('tab-btn-p1');
+      const btnP2 = document.getElementById('tab-btn-p2');
+      const p1Content = document.getElementById('content-p1');
+      const p2Content = document.getElementById('content-p2');
 
-    if (!p1Content || !p2Content || !btnP1 || !btnP2) return;
+      if (!btnP1 || !btnP2 || !p1Content || !p2Content) return;
 
-    if (target === 'p1') {
-      p1Content.classList.remove('hidden');
-      p2Content.classList.add('hidden');
+      btnP1.addEventListener('click', function() {
+        p1Content.classList.remove('hidden');
+        p2Content.classList.add('hidden');
 
-      btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none";
-      btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
-    } else if (target === 'p2') {
-      p1Content.classList.add('hidden');
-      p2Content.classList.remove('hidden');
+        btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-blue-700 shadow-md border-0 outline-none";
+        btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+      });
 
-      btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-purple-700 shadow-md border-0 outline-none";
-      btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+      btnP2.addEventListener('click', function() {
+        p1Content.classList.add('hidden');
+        p2Content.classList.remove('hidden');
+
+        btnP2.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer bg-white text-purple-700 shadow-md border-0 outline-none";
+        btnP1.className = "w-1/2 py-2.5 px-4 rounded-xl text-xs md:text-sm font-extrabold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-slate-600 hover:text-slate-900 border-0 outline-none";
+      });
     }
-  }
+
+    setupTabs();
+  })();
 </script>
