@@ -25,7 +25,7 @@
             Muhammad Izzul Fahmi, S.Pd.
           </h1>
           <p class="text-amber-200/90 text-xs sm:text-sm font-semibold mt-0.5 tracking-wide">
-            Pendidik Sekolah Dasar & Praktisi Pembelajaran Inovatif
+            Pendidikan Guru Sekolah Dasar
           </p>
         </div>
 
@@ -50,71 +50,83 @@
     </div>
   </div>
 
-  <!-- 2. DOKUMENTASI LOKASI LPTK & SEKOLAH MITRA (POSISI DI ATAS DESKRIPSI) -->
-  <div class="bg-white rounded-3xl p-5 md:p-6 border border-slate-200 shadow-sm space-y-4">
-    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-      <h2 class="font-extrabold text-base text-slate-800 flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-red-700"></span> Lingkungan Akademik & Sekolah Praktik
-      </h2>
-      <span class="text-xs font-semibold text-slate-400">Dokumentasi Lokasi</span>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      
-      <!-- FOTO LPTK -->
-      <div class="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 h-52 md:h-60 transition-all duration-300 hover:shadow-xl">
-        <img src="assets/lokasi-lptk.jpg" alt="Kampus Universitas Negeri Jember" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" onerror="this.src='https://via.placeholder.com/600x400?text=LPTK+Universitas+Negeri+Jember'">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex flex-col justify-end p-4 text-white">
-          <span class="text-[10px] uppercase font-bold text-amber-300 tracking-wider">LPTK Penyelenggara</span>
-          <p class="font-bold text-sm md:text-base">Universitas Negeri Jember</p>
-        </div>
-      </div>
-
-      <!-- FOTO PPL -->
-      <div class="group relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 h-52 md:h-60 transition-all duration-300 hover:shadow-xl">
-        <img src="assets/lokasi-ppl.jpg" alt="SDN Tegal Besar 03 Jember" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90 group-hover:opacity-100" onerror="this.src='https://via.placeholder.com/600x400?text=UPTD+SDN+Tegal+Besar+03+Jember'">
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent flex flex-col justify-end p-4 text-white">
-          <span class="text-[10px] uppercase font-bold text-amber-300 tracking-wider">Sekolah Mitra PPL</span>
-          <p class="font-bold text-sm md:text-base">UPTD SDN Tegal Besar 03 Jember</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 3. NARASI NARATIVE PROFILE SECTION (GRID DESKRIPSI) -->
+  <!-- 2. KARTU SEPARAT LPTK KAMPUS DAN SEKOLAH PPL DENGAN FOTO DAN ALAMAT -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <!-- DESKRIPSI LATAR BELAKANG AKADEMIK -->
-    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
-      <div class="w-1.5 h-full bg-red-800 absolute left-0 top-0 bottom-0"></div>
-      
-      <div class="flex items-center gap-2.5 text-red-900 border-b border-slate-100 pb-3 pl-2">
-        <div class="p-2 bg-red-50 rounded-xl text-red-800">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+    <!-- CARD KAMPUS LPTK -->
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300">
+      <div>
+        <!-- FOTO KAMPUS -->
+        <div class="relative h-48 md:h-52 bg-slate-900 overflow-hidden">
+          <img src="assets/lokasi-lptk.jpg" alt="Universitas Negeri Jember" class="w-full h-full object-cover hover:scale-105 transition duration-500 opacity-90" onerror="this.src='https://via.placeholder.com/600x400?text=Universitas+Negeri+Jember'">
+          <div class="absolute top-3 left-3">
+            <span class="bg-red-800 text-white font-extrabold px-3 py-1 rounded-full text-[10px] uppercase tracking-wider shadow-md">
+              LPTK Penyelenggara
+            </span>
+          </div>
         </div>
-        <h2 class="font-extrabold text-base text-slate-800">Latar Belakang & Akademik</h2>
+
+        <!-- DETAIL KAMPUS -->
+        <div class="p-5 space-y-3">
+          <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+            <div class="p-2 bg-red-50 text-red-800 rounded-xl">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-slate-800 text-base">Universitas Jember (UNEJ)</h3>
+              <p class="text-xs text-slate-400 font-medium">Fakultas Keguruan dan Ilmu Pendidikan (FKIP)</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-600 leading-relaxed text-justify">
+            Pendidikan profesional ini ditempuh melalui Program Studi Pendidikan Guru Sekolah Dasar (PPG Calon Guru Gelombang 1 Tahun 2026) di LPTK Universitas Negeri Jember.
+          </p>
+        </div>
       </div>
 
-      <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2">
-        Pendidikan profesional ini ditempuh melalui Program Studi Pendidikan Guru Sekolah Dasar (PPG Calon Guru Gelombang 1 Tahun 2026) di LPTK Universitas Negeri Jember. Fokus utama pengembangan kompetensi diarahkan pada penguasaan pedagogi mendalam, perancangan modul ajar berbasis <i>Deep Learning</i>, serta penerapan asesmen autentik yang berpusat pada kebutuhan dan karakteristik peserta didik usia sekolah dasar.
-      </p>
+      <!-- ALAMAT KAMPUS -->
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-start gap-2 text-xs text-slate-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-red-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Jalan Kalimantan No. 37, Kampus Tegalboto, Kecamatan Sumbersari, Kabupaten Jember, Jawa Timur.</span>
+      </div>
     </div>
 
-    <!-- DESKRIPSI PELAKSANAAN PPL -->
-    <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
-      <div class="w-1.5 h-full bg-blue-700 absolute left-0 top-0 bottom-0"></div>
-
-      <div class="flex items-center gap-2.5 text-blue-900 border-b border-slate-100 pb-3 pl-2">
-        <div class="p-2 bg-blue-50 rounded-xl text-blue-800">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+    <!-- CARD SEKOLAH PPL -->
+    <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300">
+      <div>
+        <!-- FOTO SEKOLAH -->
+        <div class="relative h-48 md:h-52 bg-slate-900 overflow-hidden">
+          <img src="assets/lokasi-ppl.jpg" alt="SDN Tegal Besar 03 Jember" class="w-full h-full object-cover hover:scale-105 transition duration-500 opacity-90" onerror="this.src='https://via.placeholder.com/600x400?text=SDN+Tegal+Besar+03+Jember'">
+          <div class="absolute top-3 left-3">
+            <span class="bg-blue-800 text-white font-extrabold px-3 py-1 rounded-full text-[10px] uppercase tracking-wider shadow-md">
+              Sekolah Praktik PPL
+            </span>
+          </div>
         </div>
-        <h2 class="font-extrabold text-base text-slate-800">Pelaksanaan Praktik Pengalaman Lapangan</h2>
+
+        <!-- DETAIL SEKOLAH -->
+        <div class="p-5 space-y-3">
+          <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+            <div class="p-2 bg-blue-50 text-blue-800 rounded-xl">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-slate-800 text-base">SDN Tegal Besar 03</h3>
+              <p class="text-xs text-slate-400 font-medium">UPTD Satuan Pendidikan Sekolah Dasar</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-600 leading-relaxed text-justify">
+            Kegiatan Praktik Pengalaman Lapangan (PPL) Siklus Terbimbing dilaksanakan secara nyata di UPTD SDN Tegal Besar 03 Jember melalui bimbingan intensif serta kolaborasi aktif bersama Dosen Pembimbing Lapangan dan Guru Pamong.
+          </p>
+        </div>
       </div>
 
-      <p class="text-xs md:text-sm text-slate-600 leading-relaxed text-justify pl-2">
-        Kegiatan Praktik Pengalaman Lapangan (PPL) Siklus Terbimbing dilaksanakan secara nyata di UPTD SDN Tegal Besar 03 Jember. Selama masa praktik, proses merancang, melaksanakan, hingga mengevaluasi pembelajaran dilakukan melalui bimbingan intensif serta kolaborasi aktif bersama Dosen Pembimbing Lapangan FKIP Universitas Jember dan Guru Pamong sekolah setempat.
-      </p>
+      <!-- ALAMAT SEKOLAH -->
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-start gap-2 text-xs text-slate-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-700 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Jl. Teuku Umar No.90, Tegal Besar, Kecamatan Kaliwates, Kabupaten Jember, Jawa Timur 68131.</span>
+      </div>
     </div>
 
   </div>
